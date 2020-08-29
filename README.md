@@ -38,7 +38,8 @@ Facebook engineering interview process
 - [x] [Cracking the Facebook Coding Interview - The Approach](https://vimeo.com/interviewprepsession/theapproach) - FB_IPS
 - [x] [Cracking the Facebook Coding Interview - Problem Walk-Through](https://vimeo.com/interviewprepsession/problemwalkthrough) - FB_IPS
 - [ ] [How to Crush Your Coding Interview](https://www.facebook.com/Engineering/videos/10152735777427200/?v=10152735777427200)
-- [ ] [Facebook Mock Interview Prep (password: 2018prep) ](https://vimeo.com/275298962)
+- [ ] [Facebook Mock Interview Prep](https://vimeo.com/275298962) - 2018prep
+- [ ] [Software Engineering: Initial Technical Interview](https://vimeo.com/357608978) - fbprep
 
 ## Tools
 - [ ] [CoderPad](https://coderpad.io/)
