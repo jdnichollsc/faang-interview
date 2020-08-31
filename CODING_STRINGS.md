@@ -1,5 +1,5 @@
 ## Facebook Coding Interview Prep
-
+---
 ### Counting Valleys on a Hike
 A hiker tracks their walk through hills. During the hike, the hiker took exactly n steps. Every step is either *uphill*, U, or a *downhill*, D step. The hike starts and ends at altitude 0, and each step up or down represents a 1 unit change in altitude. We define the following terms:
 - A *mountain* is a sequence of consecutive steps *above* altitude 0, starting with a step *up* from altitude 0 and ending with a step *down* to altitude 0.
@@ -48,6 +48,8 @@ function countingValleys(n, s) {
     }, 0)
 }
 ```
+
+---
 
 ### Count the a's in an Infinitely Repeating String
 There is a string, `s`, of lowercase English letters that is repeated infinitely many times.
