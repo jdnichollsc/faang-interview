@@ -160,3 +160,64 @@ function makeAnagram(a, b) {
     return arrays.min.length + arrays.max.length
 }
 ```
+
+---
+
+### Alternating Characters
+You are given a string containing characters `A` and `B` only. Your task is to change it into a string such that there are no matching adjacent characters. To do this, you are allowed to delete zero or more characters in the string.
+Your task is to find the minimum number of required deletions.
+For example, given the string `s = AABAAB`, remove an `A` at positions 0 and 3 to make `s = ABAB` in 2 deletions.
+#### Function Description
+Complete the `alternatingCharacters` function in the editor below. It must return an integer representing the minimum number of deletions to make the alternating string.
+`alternatingCharacters` has the following parameter:
+- *s*: a string
+#### Input Format
+The first line contains an integer *q*, the number of input strings.
+The next *q* lines each contain a string *s*.
+#### Constraints
+- *q*, the number of strings, will be between 1 and 10
+- The length of each string *s* is less than 10^5
+- Each string *s* will consist only of characters `A` and `B`
+#### Output Format
+For each string, print the minimum number of deletions required on a new line.
+#### Sample Input
+```
+5
+AAAA
+BBBBB
+ABABABAB
+BABABA
+AAABBB
+```
+#### Sample Output
+```
+3
+4
+0
+0
+4
+```
+#### Explanation
+The characters marked red are the ones that can be deleted so that the string doesn't have matching consecutive characters.
+![Explanation](https://s3.amazonaws.com/hr-assets/0/1502450721-a0a2e9b5bd-alternatingCharacter2.png)
+#### SOLUTION
+```js
+function alternatingCharacters(s) {
+  let deletions = 0
+  const characters = s.split('')
+  for (let i = 0; i < characters.length; i++) {
+      const letter = characters[i]
+      let numToDelete = 0
+      for (let j = i + 1; j < characters.length; j++) {
+          if (letter === characters[j]) {
+              numToDelete++
+          } else {
+              break
+          }
+      }
+      deletions += numToDelete
+      i += numToDelete
+  }
+  return  deletions
+}
+```
