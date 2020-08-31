@@ -1,4 +1,4 @@
-## Facebook Coding Interview Prep
+## Coding Interview Prep
 ---
 ### Counting Valleys on a Hike
 A hiker tracks their walk through hills. During the hike, the hiker took exactly n steps. Every step is either *uphill*, U, or a *downhill*, D step. The hike starts and ends at altitude 0, and each step up or down represents a 1 unit change in altitude. We define the following terms:
@@ -99,5 +99,64 @@ function repeatedString(s, n) {
 
 function getOccurrences(word, letter) {
     return word.split('').filter(c => c === letter).length
+}
+```
+
+---
+
+### Making Anagrams
+We consider two strings to be anagrams of each other if the first string's letters can be rearranged to form the second string. In other words, both strings must contain the same exact letters in the same exact frequency For example, `bacdc` and `dcbac` are anagrams, but `bacdc` and `dcbad` are not.
+
+Given two strings, `a` and `b`, that may or may not be of the same length, determine the minimum number of character deletions required to make `a` and `b` anagrams. Any characters can be deleted from either of the strings.
+For example, if `a = cde` and `b = dcf`, we can delete `e` from string *a* and `f` from string *b* so that both remaining strings are `cd` and `dc` which are anagrams.
+#### Function Description
+Complete the `makeAnagram` function in the editor below. It must return an integer representing the minimum total characters that must be deleted to make the strings anagrams.
+`makeAnagram` has the following parameter(s):
+- *a*: a string
+- *b*: a string
+#### Input Format
+The first line contains a single string, *a*.
+The second line contains a single string, *b*.
+#### Constraints
+- The lengths of *a* and *b* are at least 1
+- The strings *a* and *b* consist of lowercase English alphabetic letters, in other words ASCII characters from the range [a-z].
+#### Output Format
+Print the number of characters you must delete to make the two strings anagrams of each other.
+#### Sample Input
+```
+cde
+abc
+```
+#### Sample Output
+`4`
+#### Explanation
+We delete the following characters from our two strings to turn them into anagrams of each other:
+- Remove `d` and `e` from `cde` to get `c`.
+- Remove `a` and `b` from `abc` to get `c`.
+We must delete 4 characters to make both strings anagrams, so we print 4 on a new line.
+#### SOLUTION
+```js
+function makeAnagram(a, b) {
+    const aArray = a.split('')
+    const bArray = b.split('')
+    const arrays = aArray.length < bArray.length ? {
+      min: aArray,
+      max: bArray
+    } : {
+      min: bArray,
+      max: aArray
+    }
+    let i = 0
+    while (i < arrays.min.length) {
+        const letter = arrays.min[i]
+        const indexMax = arrays.max.indexOf(letter)
+        if (indexMax >= 0) {
+           arrays.min.splice(i, 1)
+           arrays.max.splice(indexMax, 1)
+        } else {
+           i++
+        }
+    }
+    return arrays.min.length + arrays.max.length
 }
 ```
