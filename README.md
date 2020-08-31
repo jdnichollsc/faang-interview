@@ -3,6 +3,8 @@ Facebook engineering interview process
 
 ## Structure
 - Coding
+  * [Strings](./CODING_STRINGS.md)
+  * [Arrays](./CODING_ARRAYS.md)
 - Behavioral
 - Design
 
