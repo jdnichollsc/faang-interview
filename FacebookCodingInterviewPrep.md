@@ -51,6 +51,57 @@ function countingValleys(n, s) {
 }
 ```
 
+### Count the a's in an Infinitely Repeating String
+There is a string, `s`, of lowercase English letters that is repeated infinitely many times.
+Given an integer, `n`, find and print the number of letter a's in the first *n* letters of this infinite string.
+For example, if the string `s = 'abcac'` and *n* = 10, the substring we consider is `'abcacabcac'`, the first 10 characters of the infinite string. There are 4 occurrences of `a` in this substring.
+#### Function Description
+Complete the `repeatedString` function in the editor below. It should return an integer representing the number of occurrences of `a` in the first *n* characters in the infinitely repeating string.
+`repeatedString` has the following parameters:
+- s: a string to repeat
+- n: the number of characters to consider
+#### Input Format
+The first line contains a single string, *s*. 
+The second line contains an integer, *n*.
+#### Constraints
+- The length of *s* is between 1 and 100
+- *n* is a positive integer
+#### Output Format
+Print the number of letter a's in the first *n* letters of the infinite string created by repeating *s* infinitely many times.
+#### Sample Input 0
+```
+aba
+10
+```
+#### Sample Output 0
+`7`
+#### Explanation 0
+The first *n* = 10 letters of the infinite string are `abaabaabaa`. Because there are 7 a's, we print 7 on a new line.
+#### Sample Input 1
+```
+a
+1000000000000
+```
+#### Sample Output 1
+`1000000000000`
+#### Explanation 1
+Because all of the first *n* = 1000000000000 letters of the infinite string are a, we print 1000000000000 on a new line.
+
+#### SOLUTION
+```js
+function repeatedString(s, n) {
+    const occurrences = getOccurrences(s, 'a')
+    const numberOfRepetitions = parseInt(n / s.length)
+    const totalMissingLetters = n % s.length
+    const restOccurrences = getOccurrences(s.substring(0, totalMissingLetters), 'a')
+    return numberOfRepetitions * occurrences + restOccurrences
+}
+
+function getOccurrences(word, letter) {
+    return word.split('').filter(c => c === letter).length
+}
+```
+
 ## Arrays
 
 ### Count Matching Pairs of Numbers
@@ -133,7 +184,7 @@ The only cloud to avoid is `c[4]`. Emma can win the game in 3 jumps:
 ![Explanation 1](https://s3.amazonaws.com/hr-challenge-images/20832/1461136358-764298d363-jump5.png)
 
 #### SOLUTION
-```
+```js
 function jumpingOnClouds(c) {
     let jumps = 0
     for (let i = 1; i < c.length; i++) {
