@@ -17,6 +17,11 @@ Facebook engineering interview process
 - [ ] [Proyect Euler](https://projecteuler.net/index.php)
 - [ ] [GeeksforGeeks](https://www.geeksforgeeks.org/facebook-interview-preparation/)
 
+## Coding challenges
+- [ ] [CodeForces](https://codeforces.com)
+- [ ] [Topcoder](https://www.topcoder.com)
+- [ ] [CodeChef](https://www.codechef.com/)
+
 ## Events
 - [x] [Master Your FB Interview](http://www.eventbrite.com/o/facebook-london-master-your-fb-interview-8037667565)
 
