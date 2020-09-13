@@ -20,7 +20,13 @@ Facebook engineering interview process
 ## Coding challenges
 - [ ] [CodeForces](https://codeforces.com)
 - [ ] [Topcoder](https://www.topcoder.com)
-- [ ] [CodeChef](https://www.codechef.com/)
+- [ ] [CodeChef](https://www.codechef.com)
+
+## Data Structures
+- [ ] [Complete Introduction to the 30 Most Essential Data Structures & Algorithms](https://dev.to/iuliagroza/complete-introduction-to-the-30-most-essential-data-structures-algorithms-43kd)
+
+## Design
+- [ ] [Ten Design principles](https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles)
 
 ## Events
 - [x] [Master Your FB Interview](http://www.eventbrite.com/o/facebook-london-master-your-fb-interview-8037667565)
