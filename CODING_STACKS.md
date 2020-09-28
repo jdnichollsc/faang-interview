@@ -80,7 +80,7 @@ function largestRectangle(h) {
 // Complete the solve function below.
 function riddle(arr) {
     // solve here
-    /* O (n*n)
+    /* Time complexity => O (n*n)
     const stack = arr
     const windowSizes = []
     for (let i = 0; i < arr.length; i++) {
@@ -91,43 +91,6 @@ function riddle(arr) {
             if (value > maxSize) maxSize = value
         }
         windowSizes.push(maxSize)
-    }
-    return windowSizes*/
-    
-    
-    /* O (n*n)
-    const left = []
-    const right = arr
-    const windowSizes = []
-    let isRight = true
-    let maxSize = 0
-    const n = arr.length
-    let prevValue = 0
-    while (windowSizes.length < n) {
-        if (isRight) {
-            const value1 = prevValue || right.shift()
-            if (value1) maxSize = Math.max(maxSize, value1)
-            prevValue = right.shift()
-            if (prevValue) {
-                maxSize = Math.max(maxSize, prevValue)
-                left.push(Math.min(value1, prevValue))
-            }
-        } else {
-            const value1 = prevValue || left.shift()
-            if (value1) maxSize = Math.max(maxSize, value1)
-            prevValue = left.shift()
-            if (prevValue) {
-                maxSize = Math.max(maxSize, prevValue)
-                if (value1)
-                right.push(Math.min(value1, prevValue))
-            }
-        }
-        if (!right.length || !left.length) {
-            windowSizes.push(maxSize)
-            maxSize = 0
-            isRight = !isRight
-            prevValue = 0
-        }
     }
     return windowSizes*/
     
@@ -156,5 +119,10 @@ function riddle(arr) {
 }
 
 ```
+
+---
+
+### Poisonous Plants
+https://www.hackerrank.com/challenges/poisonous-plants/problem
 
 ---
