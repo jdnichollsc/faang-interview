@@ -71,20 +71,6 @@ function findBlankWords (crossword) {
     }
     return words
 }
-// https://stackoverflow.com/a/60136724/1532821
-function getArrayMutations(arr, perms = [], len = arr.length) {
-  if (len === 1) perms.push(arr.slice(0))
-
-  for (let i = 0; i < len; i++) {
-    getArrayMutations(arr, perms, len - 1)
-
-    len % 2 // parity dependent adjacent elements swap
-      ? [arr[0], arr[len - 1]] = [arr[len - 1], arr[0]]
-      : [arr[i], arr[len - 1]] = [arr[len - 1], arr[i]]
-  }
-
-  return perms
-}
 
 function solvePuzzle (crossword, blankWords, words) {
     const mapLetters = {}
@@ -114,5 +100,19 @@ function solvePuzzle (crossword, blankWords, words) {
         solved[i] = solved[i].join('')
     }
     return solved
+}
+// https://stackoverflow.com/a/60136724/1532821
+function getArrayMutations(arr, perms = [], len = arr.length) {
+  if (len === 1) perms.push(arr.slice(0))
+
+  for (let i = 0; i < len; i++) {
+    getArrayMutations(arr, perms, len - 1)
+
+    len % 2 // parity dependent adjacent elements swap
+      ? [arr[0], arr[len - 1]] = [arr[len - 1], arr[0]]
+      : [arr[i], arr[len - 1]] = [arr[len - 1], arr[i]]
+  }
+
+  return perms
 }
 ```
