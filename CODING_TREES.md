@@ -1,6 +1,6 @@
 
 ### Height of a Binary Tree
-```
+```python
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 '''
 class Node:
@@ -24,7 +24,7 @@ def height(root):
 ---
 
 ### Binary Search Tree: Lowest Common Ancestor
-```
+```python
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 '''
 class Node:
@@ -129,3 +129,10 @@ function printNode(node, indent = '') {
   if (!!rightChild) printNode(rightChild, indent+'  ');
 }
 ```
+
+---
+
+### Balanced Forest
+https://www.hackerrank.com/challenges/balanced-forest/problem
+
+---
