@@ -5,6 +5,15 @@ Facebook engineering interview process
 - Coding
   * [Strings](./CODING_STRINGS.md)
   * [Arrays](./CODING_ARRAYS.md)
+  * [Sorting](./CODING_SORTING.md)
+  * [Hash Tables](./CODING_HASH_TABLES.md)
+  * [Trees](./CODING_TREES.md)
+  * [Linked Lists](./CODING_LINKED_LISTS.md)
+  * [Recursion](./CODING_RECURSION.md)
+  * [Greedy Algorithms](./CODING_GREEDY_ALGORITHMS.md)
+  * [Search](./CODING_SEARCH.md)
+  * [Stacks](./CODING_STACKS.md)
+  * [Queues](./CODING_QUEUES.md)
 - Behavioral
 - Design
 
