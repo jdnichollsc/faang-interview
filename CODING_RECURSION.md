@@ -1,6 +1,6 @@
 
 ### Fibonacci Numbers
-```
+```python
 def fibonacci(n):
     if (n == 0 or n == 1): return n
     return fibonacci(n-1) + fibonacci(n-2)
@@ -116,3 +116,9 @@ function getArrayMutations(arr, perms = [], len = arr.length) {
   return perms
 }
 ```
+
+---
+
+### Ways to Climb a Staircase
+https://www.hackerrank.com/challenges/ctci-recursive-staircase/problem
+
