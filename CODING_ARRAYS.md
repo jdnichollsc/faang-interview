@@ -141,7 +141,6 @@ function minimumSwaps(q) {
   let expectedSecond = 2
   let expectedThird = 3
   
-  //let orderedList = [...q].sort((a, b) => a-b)
   for (let i = 0; i < q.length; i++) {
     const currentValue = q[i]
     if (currentValue === expectedFirst) {
@@ -160,15 +159,8 @@ function minimumSwaps(q) {
       break
     }
   }
-    /*const expectedValue = orderedList[i]
-    const diff = orderedList.indexOf(currentValue) - i
-    if (diff < 3) {
-        if (diff > 0) result+= diff
-    } else {
-        result = 'Too chaotic'
-        break
-    }*/
   console.log(result)
+  return result
 }
 ```
 ---
@@ -178,29 +170,6 @@ function minimumSwaps(q) {
 ```js
 // Complete the minimumSwaps function below.
 function minimumSwaps(arr) {
-  /*let prev
-  let swaps = 0
-  for (let i = 0; i < arr.length; i++) {
-      const currentValue = arr[i]
-      for (let j = i + 1; j < arr.length; j++) {
-          const newValue = arr[j]
-          if (newValue < prev) {
-              if (newValue < currentValue) {
-                arr[j] = currentValue
-                arr[i] = newValue
-                prev = newValue
-                i -= 1
-                swaps++
-              } else {
-                  prev = arr[i+1]
-              }
-              break
-          }
-          prev = arr[j]
-      }
-  }
-  return swaps*/
-    
   let swaps = 0;
   for(let i = 0; i < arr.length - 1; i++){
     if(arr[i] !== i+1) {
@@ -243,4 +212,10 @@ function pairs(k, arr) {
   return pairs
 }
 ```
+
+---
+
+### Add Values to Array Ranges
+https://www.hackerrank.com/challenges/crush/problem
+
 ---
