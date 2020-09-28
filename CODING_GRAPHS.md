@@ -9,3 +9,8 @@ https://www.hackerrank.com/challenges/find-the-nearest-clone/problem
 https://www.hackerrank.com/challenges/matrix/problem
 
 ---
+
+### DFS: Connected Cell in a Grid
+https://www.hackerrank.com/challenges/ctci-connected-cell-in-a-grid/problem
+
+---
