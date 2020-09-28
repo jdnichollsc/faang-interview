@@ -97,3 +97,150 @@ function jumpingOnClouds(c) {
 ```
 
 ---
+
+### Left Rotation
+
+```js
+function rotLeft(a, d) {
+    const result = [...a]
+    for (let i = 0; i < d; i++) {
+        const first = result.shift()
+        result.push(first)
+    }
+    return result
+}
+```
+---
+### 2D Array - Maximum Hourglass
+
+```js
+function hourglassSum(arr) {
+  const values = []
+  const maxRowCol = arr.length - 2
+  for (let i = 0; i < maxRowCol; i++) {
+    for (let j = 0; j < maxRowCol; j++) {
+        values.push(
+            arr[i][j] + arr[i][j+1] + arr[i][j+2] +
+            arr[i+1][j+1] +
+            arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2]
+        )
+    }
+  }
+  return Math.max(...values)
+}
+```
+---
+
+### Queue Position Swapping
+
+```js
+// Complete the minimumSwaps function below.
+function minimumSwaps(q) {
+  var result = 0
+  let expectedFirst = 1
+  let expectedSecond = 2
+  let expectedThird = 3
+  
+  //let orderedList = [...q].sort((a, b) => a-b)
+  for (let i = 0; i < q.length; i++) {
+    const currentValue = q[i]
+    if (currentValue === expectedFirst) {
+      expectedFirst = expectedSecond
+      expectedSecond = expectedThird
+      ++expectedThird
+    } else if (currentValue === expectedSecond) {
+      ++result
+      expectedSecond = expectedThird
+      ++expectedThird
+    } else if (currentValue === expectedThird) {
+      result += 2
+      ++expectedThird
+    } else {
+      result = "Too chaotic"
+      break
+    }
+  }
+    /*const expectedValue = orderedList[i]
+    const diff = orderedList.indexOf(currentValue) - i
+    if (diff < 3) {
+        if (diff > 0) result+= diff
+    } else {
+        result = 'Too chaotic'
+        break
+    }*/
+  console.log(result)
+}
+```
+---
+
+### Minimum Swaps to Sort Array
+
+```js
+// Complete the minimumSwaps function below.
+function minimumSwaps(arr) {
+  /*let prev
+  let swaps = 0
+  for (let i = 0; i < arr.length; i++) {
+      const currentValue = arr[i]
+      for (let j = i + 1; j < arr.length; j++) {
+          const newValue = arr[j]
+          if (newValue < prev) {
+              if (newValue < currentValue) {
+                arr[j] = currentValue
+                arr[i] = newValue
+                prev = newValue
+                i -= 1
+                swaps++
+              } else {
+                  prev = arr[i+1]
+              }
+              break
+          }
+          prev = arr[j]
+      }
+  }
+  return swaps*/
+    
+  let swaps = 0;
+  for(let i = 0; i < arr.length - 1; i++){
+    if(arr[i] !== i+1) {
+      arr[arr.lastIndexOf(i+1)] = arr[i];
+      swaps++;
+    }
+  }
+  return swaps;
+}
+```
+
+---
+
+### Searching for difference Pairs
+
+```js
+// Complete the pairs function below.
+function pairs(k, arr) {
+  let pairs = 0
+  const memo = {}
+  const sortDesc = arr.sort((a, b) => b-a)
+  for(let i = 0; i < sortDesc.length; i++) {
+      if (sortDesc[i] > k) {
+          if (memo[sortDesc[i]]) {
+              pairs++
+              continue
+          }
+          const diff = sortDesc[i] - k
+          for (let j = i + 1; j < sortDesc.length; j++) {
+              if (sortDesc[j] === diff) {
+                  memo[sortDesc[i]] = 1
+                  pairs++
+                  break
+              }
+          }
+      } else {
+          break
+      }
+  }
+  return pairs
+}
+```
+---
