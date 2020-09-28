@@ -53,4 +53,10 @@ function findItems(machines, goal, time) {
     return items >= goal
 }
 ```
+
+---
+
+### Making candies
+https://www.hackerrank.com/challenges/making-candies/problem
+
 ---
