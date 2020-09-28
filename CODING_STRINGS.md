@@ -221,3 +221,172 @@ function alternatingCharacters(s) {
   return  deletions
 }
 ```
+---
+
+### Character Frequencies
+
+```js
+// Complete the isValid function below.
+function isValid(s) {
+    const characters = s.split('')
+    const map = new Map()
+    for (let i = 0; i < characters.length; i++) {
+        const character = characters[i]
+        if (map.has(character)) {
+            map.set(character, map.get(character) + 1)
+        } else {
+            map.set(character, 1)
+        }
+    }
+    const groups = Array.from(map)
+    let charSize = groups[0][1]
+    let mismatch = 0
+    let result = 'YES'
+    for (let i = 1; i < groups.length; i++) {
+        const size = groups[i][1]
+        if (size !== charSize) {
+            if (mismatch > 0) {
+                result = 'NO'
+                break
+            }
+            mismatch++
+            if (size === 1) continue
+            if (Math.abs(size - charSize) > 1) {
+                result = 'NO'
+                break
+            }
+        }
+    }
+    return result
+}
+```
+---
+
+### Special Substrings
+
+```js
+// Complete the substrCount function below.
+function substrCount(n, s) {
+    let counter = 0
+    for (let i = 0; i < n; i++) {
+        const character = s[i]
+        let middlePart = character
+        counter++
+        for (let j = i + 1; j < n; j++) {
+            if (s[j] === character) {
+                counter++
+                middlePart += character
+            } else {
+                const secondPartIndex = j + 1
+                if (s.substring(secondPartIndex, secondPartIndex + middlePart.length) === middlePart) {
+                    counter++
+                }
+                break
+            }
+        }
+    }
+    return counter
+}
+```
+---
+
+### Common Child
+
+```js
+// Complete the commonChild function below.
+function commonChild(s1, s2) {
+    const firstString = s1.split('')
+    const secondString = s2.split('')
+    const memo = [...secondString, 0].fill(0)
+    // const subsequences = [...secondString, ''].fill('')
+    for (let i = 1; i <= firstString.length; i++) {
+        let prev = 0
+        // let prevSubsequences = ''
+        for (let j = 1; j <= secondString.length; j++) {
+            const temp = memo[j]
+            // const tempSubsequence = subsequences[j]
+            if (firstString[i-1] === secondString[j-1]) {
+                memo[j] = prev + 1
+                // subsequences[j] = prevSubsequences + firstString[i-1]
+            } else if (memo[j-1] > memo[j]) {
+                memo[j] = memo[j-1]
+                // subsequences[j] = subsequences[j-1]
+            }
+            prev = temp
+            // prevSubsequences = tempSubsequence
+        }
+    }
+    // console.log(subsequences[secondString.length])
+    return memo[secondString.length]
+}
+```
+---
+
+### Abbreviation
+
+```js
+// Complete the abbreviation function below.
+function abbreviation(a, b) {
+  /*let lettersA = a.toUpperCase()
+  let lettersB = b.toUpperCase()
+  let index = 0
+  let indexA = 0
+  let indexB = 0
+  let isAbbreviation = true
+  // TODO: Fix missing test cases
+  while (index < a.length || index < b.length) {
+    const letterA = a.charAt(index)
+    if (letterA && letterA === letterA.toUpperCase()) {
+        indexB = lettersB.indexOf(letterA)
+        if (indexB > -1) {
+            lettersB = lettersB.slice(indexB+1)
+        } else {
+            isAbbreviation = false
+            break
+        }
+    }
+
+    const letterB = b.charAt(index)
+    if (letterB) {
+        indexA = lettersA.indexOf(letterB)
+        if (indexA > -1) {
+            lettersA = lettersA.slice(indexA+1)
+        } else {
+            isAbbreviation = false
+            break
+        }
+    }
+
+    index++
+  }
+  return isAbbreviation ? 'YES' : 'NO'*/
+
+    const firstString = a.split('')
+    const secondString = b.split('')
+    
+    let memo = new Array(firstString.length + 1)
+    memo[0] = new Array(secondString.length + 1)
+    memo[0][0] = true;
+    for (let i = 1; i <= a.length; i++) {
+        memo[i] = new Array(secondString.length + 1)
+        memo[i][0] = a[i-1] !== a[i-1].toUpperCase()
+    }
+    for (let i = 1; i <= a.length; i++) {
+        const rowPrev = i - 1
+        for (let j = 1; j <= b.length; j++) {
+            const colPrev = j - 1
+            if (a[rowPrev] === b[colPrev]) {
+                memo[i][j] = memo[rowPrev][colPrev]
+            } else if (a[rowPrev].toUpperCase() === b[colPrev]) {
+                memo[i][j] = memo[rowPrev][colPrev] || memo[rowPrev][j]
+            } else if (a[rowPrev] === a[rowPrev].toUpperCase()) {
+                memo[i][j] = false
+            } else {
+                memo[i][j] = memo[rowPrev][j]
+            }
+        }
+    }
+    return memo[firstString.length][secondString.length] ? 'YES' : 'NO'
+}
+
+```
