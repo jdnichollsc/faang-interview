@@ -57,3 +57,8 @@ function activityNotifications(expenditure, d) {
 ```
 
 ---
+
+### Counting Inversions
+https://www.hackerrank.com/challenges/ctci-merge-sort/problem
+
+---
