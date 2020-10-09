@@ -34,6 +34,7 @@ Facebook engineering interview process
 
 ## Data Structures
 - [ ] [Complete Introduction to the 30 Most Essential Data Structures & Algorithms](https://dev.to/iuliagroza/complete-introduction-to-the-30-most-essential-data-structures-algorithms-43kd)
+- [ ] [Learn Data Structure & Algorithm in JavaScript](https://dev.to/edisonpebojots/data-structure-algorithm-chapter-01-2538)
 
 ## Design
 - [ ] [Ten Design principles](https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles)
