@@ -116,12 +116,6 @@ function shortestCellPath(grid, sr, sc, tr, tc) {
 
 	// your code goes here
   
-  /*
-    S111
-    0001
-    T111
-  */
-  
   const visited = {}
   const queue = []
   const startCell = {
