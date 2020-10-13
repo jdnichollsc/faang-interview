@@ -92,15 +92,15 @@ output: -1
 ```
 
 #### Constraints
-- [time limit] 5000ms
-- [input] array.array.integer grid
+- **[time limit]** 5000ms
+- **[input]** array.array.integer grid
     * 1 ≤ arr.length = arr[i].length ≤ 10
-- [input] integer sr
-- [input] integer sc
-- [input] integer tr
-- [input] integer tc
+- **[input]** integer sr
+- **[input]** integer sc
+- **[input]** integer tr
+- **[input]** integer tc
     * All sr, sc, tr, tc are valid locations in the grid, grid[sr][sc] = grid[tr][tc] = 1, and (sr, sc) != (tr, tc).
-- [output] integer
+- **[output]** integer
 
 #### SOLUTION
 ```js
