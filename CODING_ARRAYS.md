@@ -147,8 +147,92 @@ function rotLeft(a, d) {
 ```
 
 ---
-### 2D Array - Maximum Hourglass
+### [2D Array - Maximum Hourglass](https://www.hackerrank.com/challenges/2d-array/problem)
+Given a **6 x 6** 2D Array, **arr**:
+```
+1 1 1 0 0 0
+0 1 0 0 0 0
+1 1 1 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+```
+An hourglass in **A** is a subset of values with indices falling in this pattern in **arr**'s graphical representation:
+```
+a b c
+  d
+e f g
+```
+There are **16** hourglasses in **arr**. An hourglass sum is the sum of an hourglass' values. Calculate the hourglass sum for every hourglass in **arr**, then print the maximum hourglass sum. The array will always be **6 x 6**.
 
+#### Example
+arr =
+```
+-9 -9 -9  1 1 1 
+ 0 -9  0  4 3 2
+-9 -9 -9  1 2 3
+ 0  0  8  6 6 0
+ 0  0  0 -2 0 0
+ 0  0  1  2 4 0
+```
+The **16** hourglass sums are:
+```
+-63, -34, -9, 12, 
+-10,   0, 28, 23, 
+-27, -11, -2, 10, 
+  9,  17, 25, 18
+```
+The highest hourglass sum is **28** from the hourglass beginning at row **1**, column **2**:
+```
+0 4 3
+  1
+8 6 6
+```
+**Note:** If you have already solved the Java domain's Java 2D Array challenge, you may wish to skip this challenge.
+
+#### Function Description
+Complete the function hourglassSum in the editor below.
+hourglassSum has the following parameter(s):
+
+- int arr[6][6]: an array of integers
+
+#### Returns
+- int: the maximum hourglass sum
+
+#### Input Format
+Each of the **6** lines of inputs **arr[i]** contains **6** space-separated integers **arr[i][j]**.
+
+#### Constraints
+- **-9 <= arr[i][j] <= 9**
+- **0 <= i, j <= 5**
+
+#### Output Format
+Print the largest (maximum) hourglass sum found in **arr**.
+
+#### Sample Input
+```
+1 1 1 0 0 0
+0 1 0 0 0 0
+1 1 1 0 0 0
+0 0 2 4 4 0
+0 0 0 2 0 0
+0 0 1 2 4 0
+```
+
+#### Sample Output
+`19`
+
+#### Explanation
+**arr** contains the following hourglasses:
+![hourglasses](https://s3.amazonaws.com/hr-assets/0/1534256743-35b846ad4a-hourglasssum.png)
+
+The hourglass with the maximum sum **(19)** is:
+```
+2 4 4
+  2
+1 2 4
+```
+#### SOLUTION
 ```js
 function hourglassSum(arr) {
   const values = []
@@ -167,8 +251,61 @@ function hourglassSum(arr) {
 ```
 ---
 
-### Queue Position Swapping
+### [Queue Position Swapping](https://www.hackerrank.com/challenges/new-year-chaos/problem)
+There are people waiting in line for a rollercoaster ride, and each person wears a sticker indicating their *initial* position in the queue. Initial positions increment by **1** from **1** at the front of the line to **n** at the back.
+Any person in the queue can ask the person *directly in front* of them to swap positions. If two people swap positions, they still wear the same sticker denoting their original places in line. One person can swap with *at most two others*. For example, if **n = 8** and **Person 5** swaps with **Person 4**, the queue will look like this: 1, 2, 3, 5, 4, 6, 7, 8.
+Fascinated by this chaotic queue, you decide you must know the minimum number of swaps that took place to get the queue into its current state!
 
+#### Function Description
+Complete the function *minimumSwaps* in the editor below. It must print an integer representing the minimum number of swaps necessary, or `Too chaotic` if the line configuration is not possible.
+minimumSwaps has the following parameter(s):
+- *q_count*: the length of the array
+- *q*: an array of integers
+
+#### Input Format
+The first line contains an integer *t*, the number of test cases.
+Each of the next *t* pairs of lines are as follows:
+- The first line contains an integer *t*, the number of people in the queue
+- The second line has *n* space-separated integers describing the final state of the queue.
+
+#### Constraints
+- 1 <= t <= 10
+- 1 <= n <= 10^5
+
+#### Output Format
+Print an integer denoting the minimum number of swaps needed to get the queue into its final state. Print `Too chaotic` if the state is invalid, i.e. it requires a person to have swapped with more than **2** people.
+
+#### Sample Input
+```
+2
+5
+2 1 5 3 4
+5
+2 5 1 3 4
+```
+
+#### Sample Output
+```
+3
+Too chaotic
+```
+
+#### Explanation
+**Test Case 1**
+The initial state:
+![the initial state](https://s3.amazonaws.com/hr-challenge-images/494/1451665589-31d436ba19-pic11.png)
+After person **5** moves one position ahead by asking person **4**:
+![moves one position ahead](https://s3.amazonaws.com/hr-challenge-images/494/1451665679-6504422ed9-pic2.png)
+Now person **5** moves another position ahead by asking person **3**:
+![moves another position ahead](https://s3.amazonaws.com/hr-challenge-images/494/1451665818-27bd62bb0d-pic3.png)
+And person **2** moves one position ahead by asking person **1**:
+![moves one position ahead](https://s3.amazonaws.com/hr-challenge-images/494/1451666025-02a2395a00-pic5.png)
+So the final state is **2, 1, 5, 3, 4** after three swapping operations.
+
+**Test Case 2**
+No person can swap with more than two people, so it's not possible to achieve the input state.
+
+#### SOLUTION
 ```js
 // Complete the minimumSwaps function below.
 function minimumSwaps(q) {
@@ -201,8 +338,81 @@ function minimumSwaps(q) {
 ```
 ---
 
-### Minimum Swaps to Sort Array
+### [Minimum Swaps to Sort Array](https://www.hackerrank.com/challenges/minimum-swaps-2/problem)
+You are given an unordered array consisting of consecutive integers **[1, 2, 3, ..., n]** without any duplicates. You are allowed to swap any two elements. You need to find the minimum number of swaps required to sort the array in ascending order.
 
+For example, given the array **arr = [7, 1, 3, 2, 4, 5, 6]** we perform the following steps:
+```
+i   arr                         swap (indices)
+0   [7, 1, 3, 2, 4, 5, 6]   swap (0,3)
+1   [2, 1, 3, 7, 4, 5, 6]   swap (0,1)
+2   [1, 2, 3, 7, 4, 5, 6]   swap (3,4)
+3   [1, 2, 3, 4, 7, 5, 6]   swap (4,5)
+4   [1, 2, 3, 4, 5, 7, 6]   swap (5,6)
+5   [1, 2, 3, 4, 5, 6, 7]
+```
+It took **5** swaps to sort the array.
+
+#### Function Description
+Complete the function minimumSwaps in the editor below. It must return an integer representing the minimum number of swaps to sort the array.
+minimumSwaps has the following parameter(s):
+
+- arr: an unordered array of integers
+
+#### Input Format
+The first line contains an integer, **n**, the size of **arr**.
+The second line contains **n** space-separated integers **arr[i]**.
+
+#### Constraints
+- **1 <= n <= 10^5**
+- **1 <= arr[i] <= n**
+
+#### Output Format
+Return the minimum number of swaps to sort the given array.
+
+#### Sample Input 0
+```
+4
+4 3 1 2
+```
+#### Sample Output 0
+`3`
+#### Explanation 0
+Given array **arr : [4, 3, 1, 2]**
+After swapping **(0, 2)** we get **arr: [1, 3, 4, 2]**
+After swapping **(1, 2)** we get **arr: [1, 4, 3, 2]**
+After swapping **(1, 3)** we get **arr: [1, 2, 3, 4]**
+So, we need a minimum of **3** swaps to sort the array in ascending order.
+
+#### Sample Input 1
+```
+5
+2 3 4 1 5
+```
+#### Sample Output 1
+`3`
+#### Explanation 1
+Given array **arr : [2, 3, 4, 1, 5]**
+After swapping **(2, 3)** we get **arr: [2, 3, 1, 4, 5]**
+After swapping **(0, 1)** we get **arr: [3, 2, 1, 4, 5]**
+After swapping **(0, 2)** we get **arr: [1, 2, 3, 4, 5]**
+So, we need a minimum of **3** swaps to sort the array in ascending order.
+
+#### Sample Input 2
+```
+7
+1 3 5 2 4 6 7
+```
+#### Sample Output 2
+`3`
+#### Explanation 2
+Given array **arr : [1, 3, 5, 2, 4, 6, 7]**
+After swapping **(1, 3)** we get **arr: [1, 2, 5, 3, 4, 6, 7]**
+After swapping **(2, 3)** we get **arr: [1, 2, 3, 5, 4, 6, 7]**
+After swapping **(3, 4)** we get **arr: [1, 2, 3, 4, 5, 6, 7]**
+So, we need a minimum of **3** swaps to sort the array in ascending order.
+
+#### SOLUTION
 ```js
 // Complete the minimumSwaps function below.
 function minimumSwaps(arr) {
@@ -219,8 +429,42 @@ function minimumSwaps(arr) {
 
 ---
 
-### Searching for difference Pairs
+### [Searching for difference Pairs](https://www.hackerrank.com/challenges/pairs/problem)
+You will be given an array of integers and a target value. Determine the number of pairs of array elements that have a difference equal to a target value.
+For example, given an array of [1, 2, 3, 4] and a target value of 1, we have three values meeting the condition: **2 - 1 = 1**,** 3 - 2 = 1** and **4 - 3 = 1**.
 
+#### Function Description
+Complete the pairs function below. It must return an integer representing the number of element pairs having the required difference.
+pairs has the following parameter(s):
+- k: an integer, the target difference
+- arr: an array of integers
+
+#### Input Format
+The first line contains two space-separated integers **n** and **k**, the size of **arr** and the target value.
+The second line contains **n** space-separated integers of the array **arr**.
+
+#### Constraints
+- **2 <= n <= 10^5**
+- **0 < k < 10^9**
+- **0 < arr[i] < 2^31 - 1**
+- each integer **arr[i]** will be unique
+
+#### Output Format
+An integer representing the number of pairs of integers whose difference is **k**.
+
+#### Sample Input
+```
+5 2
+1 5 3 4 2 
+```
+
+#### Sample Output
+`3`
+
+#### Explanation
+There are 3 pairs of integers in the set with a difference of 2: [5,3], [4,2] and [3,1] .
+
+#### SOLUTION
 ```js
 // Complete the pairs function below.
 function pairs(k, arr) {
