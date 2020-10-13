@@ -1,7 +1,7 @@
 ## Facebook Coding Interview Prep
 ---
 
-### Count Matching Pairs of Numbers
+### [Count Matching Pairs of Numbers](https://www.hackerrank.com/challenges/sock-merchant/problem)
 Given an array of integers, determine how many pairs of matching integers there are.
 For example, in an array of length 7, sampleArray = [1, 2, 1, 2, 1, 3, 2],  there is one pair of 1's and one pair of 2's. There are three unpaired numbers left, a 1, a 2 and a 3. The number of pairs is 2.
 #### Function Description
@@ -31,13 +31,13 @@ function numberPairs(n, ar) {
   const indices = new Set()
   return ar.reduce(function (result, currentNumber, index, ar) {
     if (!indices.has(index)) {
-        for(let i = index + 1; i < n; i++) {
-            if (ar[i] === currentNumber) {
-                indices.add(i)
-                result++
-                break
-            }
+      for(let i = index + 1; i < n; i++) {
+        if (ar[i] === currentNumber) {
+          indices.add(i)
+          result++
+          break
         }
+      }
     }
     return result
   }, 0)
@@ -46,7 +46,7 @@ function numberPairs(n, ar) {
 
 ---
 
-### Jumping on the Clouds
+### [Jumping on the Clouds](https://www.hackerrank.com/challenges/jumping-on-the-clouds/problem)
 Emma is playing a new mobile game that starts with consecutively numbered clouds. Some of the clouds are dangerous rain clouds, but others are safe, normal clouds. She can jump on any cloud having a number that is equal to the number of the current cloud plus 1 or 2 (meaning she can only skip over a maximum of one cloud). She must avoid the rain clouds. Determine the minimum number of jumps it will take Emma to jump from her starting position to the last cloud. It is always possible to win the game.
 For each game, Emma will get an array of clouds, each with a number 0 or 1: 0 if they are safe or 1 if they must be avoided. For example, `c = [0, 1, 0, 0, 0, 1, 0]`. The number on each cloud is its index in the list so she must avoid the clouds at indexes 1 and 5. She could follow the following two paths:  0→2→4→6 or 0→2→3→4→6. The first path takes 3 jumps while the second takes 4.
 #### Function Description
@@ -85,31 +85,67 @@ The only cloud to avoid is `c[4]`. Emma can win the game in 3 jumps:
 #### SOLUTION
 ```js
 function jumpingOnClouds(c) {
-    let jumps = 0
-    for (let i = 1; i < c.length; i++) {
-        if (c[i] === 0) {
-            if (c[i+1] === 0 && c[i-1] !== 1) i++
-            jumps++
-        }
+  let jumps = 0
+  for (let i = 1; i < c.length; i++) {
+    if (c[i] === 0) {
+      if (c[i+1] === 0 && c[i-1] !== 1) i++
+      jumps++
     }
-    return jumps
+  }
+  return jumps
 }
 ```
 
 ---
 
-### Left Rotation
+### [Left Rotation](https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem)
+A left rotation operation on an array shifts each of the array's elements **1** unit to the left. For example, if **2** left rotations are performed on array **[1, 2, 3, 4, 5]**, then the array would become **[3, 4, 5, 1, 2]**.
 
+Given an array **a** of **n** integers and a number, **d**, perform **d** left rotations on the array. Return the updated array to be printed as a single line of space-separated integers.
+
+#### Function Description
+Complete the function rotLeft in the editor below. It should return the resulting array of integers.
+rotLeft has the following parameter(s):
+- An array of integers **a**.
+- An integer **d**, the number of rotations.
+
+#### Input Format
+The first line contains two space-separated integers **n** and **d**, the size of **a** and the number of left rotations you must perform.
+The second line contains **n** space-separated integers **a[i]**.
+
+#### Constraints
+- **1 <= n <= 10^5**
+- **1 <= d <= n**
+- **1 <= a[i] <= 10^6**
+
+#### Output Format
+Print a single line of **n** space-separated integers denoting the final state of the array after performing **d** left rotations.
+
+#### Sample Input
+```
+5 4
+1 2 3 4 5
+```
+
+#### Sample Output
+`5 1 2 3 4`
+
+#### Explanation
+When we perform **d = 4** left rotations, the array undergoes the following sequence of changes:
+**[1, 2, 3, 4, 5] -> [2, 3, 4, 5, 1] -> [3, 4, 5, 1, 2] -> [4, 5, 1, 2, 3] -> [5, 1, 2, 3, 4]**
+
+#### SOLUTION
 ```js
 function rotLeft(a, d) {
-    const result = [...a]
-    for (let i = 0; i < d; i++) {
-        const first = result.shift()
-        result.push(first)
-    }
-    return result
+  const result = [...a]
+  for (let i = 0; i < d; i++) {
+    const first = result.shift()
+    result.push(first)
+  }
+  return result
 }
 ```
+
 ---
 ### 2D Array - Maximum Hourglass
 
