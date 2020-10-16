@@ -1,4 +1,4 @@
-## Facebook Coding Interview Prep
+## Arrays
 ---
 
 ### [Count Matching Pairs of Numbers](https://www.hackerrank.com/challenges/sock-merchant/problem)
