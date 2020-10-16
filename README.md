@@ -1,4 +1,4 @@
-# FAANG Interviews
+# FAANG Interview
 FAANG interview process
 
 ## Structure
