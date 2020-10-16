@@ -1,5 +1,5 @@
-# Facebook Interview
-Facebook engineering interview process
+# FAANG Interviews
+FAANG interview process
 
 ## Structure
 - Coding
