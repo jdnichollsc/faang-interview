@@ -1,5 +1,5 @@
 # FAANG Interview
-FAANG interview process
+FAANG engineering interview process
 
 ## Structure
 - Coding
