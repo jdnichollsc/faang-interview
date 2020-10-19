@@ -224,7 +224,57 @@ function alternatingCharacters(s) {
 ---
 
 ### Character Frequencies
-
+A string is considered to be *valid*  if all characters of the string appear the same number of times. It is also *valid*  if you can remove just 1 character anywhere in the string, and the remaining characters will occur the same number of times. Given a string ***s***, determine if it is *valid*. If so, return YES, otherwise return NO.
+- if ***s*** = *abc*, it is a valid string because frequencies are {*a* : 1, *b* : 1, *c* : 1}.
+- if ***s*** = *abcc*, it is also a valid string, because we can remove one *c* and have 1 of each character in the remaining string.
+- if ***s*** = *abccc* however, the string is *not* valid as we can only remove one occurrence of *c*. That would leave character frequencies of {*a* : 1, *b* : 1, *c* : 1}.
+#### FUNCTION DESCRIPTION
+Complete the *isValid* function in the editor below. It should return either the string YES or the string NO.
+isValid has the following parameter(s):
+- ***s***: a string
+#### INPUT FORMAT
+A single string ***s***.
+#### CONSTRAINTS
+- 1 ≤ |***s***| ≤ 10^5
+- All characters are lowercase alphabetic characters
+#### OUTPUT FORMAT
+Print YES if string ***s*** is *valid*, otherwise, print NO.
+#### SAMPLE INPUT 0 
+```
+aabbcd
+```
+#### SAMPLE OUTPUT 0
+```
+NO
+```
+#### EXPLANATION 0
+Given ***s*** = **"aabbcd"**, we would need to remove two characters, both c and d → aabb or a and b → abcd, to make it valid. We are limited to removing only one character, so ***s*** is *invalid*.
+#### SAMPLE INPUT 1 
+```
+aabbccddeefghi
+```
+#### SAMPLE OUTPUT 1
+```
+NO
+```
+#### EXPLANATION 1
+Frequency counts for the letters are as follows:
+{'a': 2, 'b': 2, 'c': 2, 'd': 2, 'e': 2, 'f': 1, 'g': 1, 'h': 1, 'i': 1}
+There are two ways to make the valid string.
+- Remove 4 characters with a frequency of 1: {fghi}
+- Remove 5 characters with a frequency of 2: {abcde}
+Neither of these is an option.
+#### SAMPLE INPUT 2 
+```
+abcdefghhgfedecba
+```
+#### SAMPLE OUTPUT 2
+```
+YES
+```
+#### EXPLANATION 2
+All characters occur twice except for *e* which occurs **3** times. We can delete one instance of *e*  to have a valiid string.
+#### SOLUTION
 ```js
 // Complete the isValid function below.
 function isValid(s) {
