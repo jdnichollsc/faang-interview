@@ -313,7 +313,58 @@ function isValid(s) {
 ---
 
 ### Special Substrings
-
+A string is said to be a *special string* if either of two conditions is met:
+- All of the characters are the same, e.g. aaa.
+- All characters except the middle one are the same, e.g. aadaa.
+A special substring is any substring of a string which meets one of those criteria. Given a string, determine how many special substrings can be formed from it.
+For example, given the string ***s*** = **mnonopoo**, we have the following special substrings: **{m, n, o, n, o, p, o, o, non, ono, opo, oo}**.
+#### FUNCTION DESCRIPTION
+Complete the *substrCount* function in the editor below. It should return an integer representing the number of special substrings that can be formed from the given string.
+substrCount has the following parameter(s):
+- *n*: an integer, the length of string 
+- *s*: a string.
+#### INPUT FORMAT
+The first line contains an integer, ***n*** , the length of ***s***.
+The second line contains the string ***s***.
+#### CONSTRAINTS
+- 1 ≤ ***n*** ≤ 10^6
+- Each character of the string is a lowercase alphabet.
+#### OUTPUT FORMAT
+Print a single line containing the count of total special substrings.
+#### SAMPLE INPUT 0
+```
+5
+asasd
+```
+#### SAMPLE OUTPUT 0
+```
+7
+```
+#### EXPLANATION 0
+The special palindromic substrings of ***s*** = **asasd** are {a, s, a, s, d, asa, sas}.
+#### SAMPLE INPUT 1
+```
+7
+abcbaba
+```
+#### SAMPLE OUTPUT 1
+```
+10
+```
+#### EXPLANATION 1
+The special palindromic substrings of ***s*** = **abcbaba** are {a, b, c, b, a, b, a, bcb, bab, aba}.
+#### SAMPLE INPUT 2
+```
+4
+aaaa
+```
+#### SAMPLE OUTPUT 2
+```
+10
+```
+#### EXPLANATION 2
+The special palindromic substrings of ***s*** = **aaaa** are {a, a, a, a, aa, aa, aa, aaa, aaa, aaaa}.
+ #### SOLUTION
 ```js
 // Complete the substrCount function below.
 function substrCount(n, s) {
@@ -341,7 +392,64 @@ function substrCount(n, s) {
 ---
 
 ### Common Child
-
+A string A is said to be a child of another string B if they match exactly, or if any number of characters in B can be deleted to form A. Given two strings of equal length, what's the longest string that can be constructed such that it is a child of both?
+For example, ABCD and ABDC  have two children with maximum length 3, ABC and ABD. They can be formed by eliminating either the D or C from both strings. Note that we will not consider ABCD as a common child because we can't rearrange characters and ABCD ≠ ABDC.
+ #### FUNCTION DESCRIPTION
+Complete the *commonChild* function in the editor below. It should return the longest string which is a common child of the input strings.
+commonChild has the following parameter(s):
+- *s*1, *s*2: two equal length strings.
+#### INPUT FORMAT
+There are two lines with one string each ***s*1** and ***s*2**.
+#### CONSTRAINTS
+- 1 ≤ |***s*1**|, |***s*2**| ≤ 5000
+- All character are upper case alphabets.
+#### OUTPUT FORMAT
+Print the length of the longest string ***s*** such that ***s*** is a child of both ***s*1** and ***s*2**.
+#### SAMPLE INPUT 
+```
+HARRY
+SALLY
+```
+#### SAMPLE OUTPUT 
+```
+2
+```
+#### EXPLANATION 
+The longest string that can be formed by deleting zero or more characters from HARRY and SALLY is AY, whose length is 2.
+#### SAMPLE INPUT 1
+```
+AA
+BB
+```
+#### SAMPLE OUTPUT 1
+```
+0
+```
+#### EXPLANATION 1
+AA and BB have no characters in common and hence the output is 0.
+#### SAMPLE INPUT 2
+```
+SHINCHAN
+NOHARAAA
+```
+#### SAMPLE OUTPUT 2
+```
+3
+```
+#### EXPLANATION 2
+The longest string that can be formed between SHINCAHN and NOHARAA while maintaining the order is NHA.
+#### SAMPLE INPUT 3
+```
+ABCDEF
+FBDAMN
+```
+#### SAMPLE OUTPUT 3
+```
+2
+```
+#### EXPLANATION 3
+BD is the longest child of the given strings.
+ #### SOLUTION
 ```js
 // Complete the commonChild function below.
 function commonChild(s1, s2) {
