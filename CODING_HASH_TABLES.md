@@ -1,5 +1,53 @@
-
+## Coding Interview Prep
+---
 ### Encode Secret Message
+You have a note to send to your friend, but you don't want anyone to recognize your handwriting. You want to know if you can cut out whole words from a magazine and use them to create a secret message. The words in your note are *case-sensitive* and you *must* use only whole words available in the magazine. You *cannot* use substrings or concatenation to create the words you need.
+Given the words in the magazine and the words in the note, print Yes if you can replicate your note *exactly* using whole words from the magazine; otherwise, print No.
+For example, the note is "Coding is fun". The magazine contains only "coding is fun". The magazine has all the right words, but there's a case mismatch. The answer is No.
+#### Function Description
+Complete the *checkMagazine* function in the editor below. It must print Yes if the note can be formed using the magazine, or No.
+checkMagazine has the following parameters:
+- *magazine*: an array of strings. Each a word in the magazine.
+- *note*: an array of strings. Each a word in the note.
+#### Input Format
+The first line contains two space-separated integers, *m* and *n*, the numbers of words in the *magazine* and the *note*.
+The second line contains *m* space-separated strings, each *magazine[i]*.
+The second line contains *n* space-separated strings, each *note[i]*.
+#### Constraints
+- 1 <= *m*, *n* <= 30000
+- The length of each word is between 1 and 5 characters
+- Each word consists of English alphabetic letters (i.e., *a* to *z* and *A* to *Z*).
+#### Output Format
+Print Yes if you can use the magazine to create a copy of your note. Otherwise, print No.
+#### Sample Input 0
+```
+6 4
+give me one hamburger today night
+give one hamburger today
+```
+#### Sample Output 0
+`Yes`
+#### Sample Input 1
+```
+6 5
+two times three is not four
+two times two is four
+```
+#### Sample Output 1
+`No`
+#### Explanation 1
+'two' only occurs once in the magazine.
+#### Sample Input 2
+```
+7 4
+ive got a lovely bunch of coconuts
+ive got some coconuts
+```
+#### Sample Output 2
+`No`
+#### Explanation 2
+The magazine is missing the word *some*.
+#### SOLUTION
 ```js
 // Complete the checkMagazine function below.
 function checkMagazine(magazine, note) {
@@ -22,6 +70,42 @@ function checkMagazine(magazine, note) {
 
 
 ### Common Substring Between Two Strings
+Given two strings, determine if they share a common substring. A substring may be as small as one character.
+For example, the words "a", "and", "art" share the common substring *a*. The words "be" and "cat" do not share a substring.
+
+#### Function Description
+Complete the function *twoStrings* in the editor below. It should return a string, either Yes or No based on whether the strings share a common substring.
+twoStrings has the following parameter(s):
+- *s1*, *s2*: two strings to analyze.
+#### Input Format
+The first line contains a single integer *p*, the number of test cases.
+The following *p* pairs of lines are as follows:
+- The first line contains string ***s1***.
+- The second line contains string ***s2***.
+#### Constraints
+*s1* and *s2* consist of characters in the range ascii[a-z].
+- 1 <= ***p*** <= 10
+- 1 <= |***s1***|,|***s2***| <= 10^5
+#### Output Format
+For each pair of strings, return Yes or No.
+#### Sample Input 0
+```
+2
+hello
+world
+hi
+world
+```
+#### Sample Output 0
+```
+YES
+NO
+```
+#### Explanation 0
+We have ***p*** = **2** pairs to check:
+1. ***s*1** = **"hello"**, ***s*2** = **"world"**. The substrings **"o"** and **"l"** are common to both strings.
+2. ***a*** = **"hi"**, ***b*** = **"world"**. ***s*1** and ***s*2** share no common substrings.
+#### SOLUTION
 ```js
 // Complete the twoStrings function below.
 function twoStrings(s1, s2) {
