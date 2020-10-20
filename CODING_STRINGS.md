@@ -516,6 +516,7 @@ YES
 ```
 #### EXPLANATION 
 ![Explanation](https://s3.amazonaws.com/hr-assets/0/1502716084-18f3d592c9-abbr.png)
+
 We have *a* = daBcd and *b* = ABC.. We perform the following operation:
 1. Capitalize the letters a and c in *a* so that *a* = dABCd.
 2. Delete all the remaining lowercase letters in *a* so that *a* = ABC.
