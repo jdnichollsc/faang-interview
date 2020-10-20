@@ -523,10 +523,10 @@ arrayManipulation has the following parameters:
 The first line contains two space-separated integers *n* and *m*, the size of the array and the number of operations.
 Each of the next *m* lines contains three space-separated integers ***a***, ***b*** and ***k***, the left index, right index and summand.
 #### CONSTRAINTS
-- **3 <= *n* <= 10^7**
-- **1 <= *m* <= 2*10^5**
-- **1 <= *a* <= *b* <= *n* **
-- **0 <= *k* <= 10^9**
+- 3 <= *n* <= 10^7
+- 1 <= *m* <= 2*10^5
+- 1 <= *a* <= *b* <= *n* 
+- 0 <= *k* <= 10^9
 #### OUTPUT FORMAT
 Return the integer maximum value in the finished array.
 #### SAMPLE INPUT
