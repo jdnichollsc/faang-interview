@@ -122,3 +122,15 @@ function getArrayMutations(arr, perms = [], len = arr.length) {
 ### Ways to Climb a Staircase
 https://www.hackerrank.com/challenges/ctci-recursive-staircase/problem
 
+### [Minimum Steps To One](https://leetcode.com/discuss/interview-question/538568/google-onsite-min-operations-to-reduce-number-to-1)
+Given an integer as an input, *num*, return the *fewest* operations, or steps, needed to arrive at **1**, when you can only perform **3** operations:
+
+- **Divide by 3**, if *num* is divisible by 3
+- **Divide by 2**, if *num* is divisible by 2
+- **Subtract 1**
+
+**For example:** given an input of **5**, there are many paths to arrive at **1**. You can **subtract 1 five times** to arrive at **1**. But that isn't the shortest path. The largest step you can take first is to **subtract 1**, which gets you to **4**. Then you can **divide by 2**, which gets you to **2**. Finally, you **subtract 1**, which gets you to **1**. So in total, we performed **3** operations: **5 => 4 => 2 => 1**
+
+Your goal is to return the minimum number of operations from the input integer to 1.
+
+If *num* is 1, then return 0, since you don't need to perform any operations to arrive at 1.
