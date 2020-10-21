@@ -107,10 +107,6 @@ algorithmic problem. ](https://www.hiredintech.com/classrooms/algorithm-design/l
 - [ ] [Gauge how prepared you are on CS fundamentals with more than 400 questions that
 will take from less than a minute to about an hour to solve. ](https://www.interviewbit.com/)
 
-## Supporting 🍻
-I believe in Unicorns 🦄
-Support [me](http://www.paypal.me/jdnichollsc/2), if you do too.
-
 ## Happy coding
 Made with <3
 
