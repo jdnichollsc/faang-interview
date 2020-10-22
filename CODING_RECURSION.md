@@ -192,7 +192,7 @@ LONDON; DEHLI; ICELAND; ANKARA
 +++++N++++
 +++++D++++
 ```
-#### SAMPLE INPUT 0
+#### SAMPLE INPUT 1
 ```
 +-++++++++
 +-++++++++
@@ -207,7 +207,7 @@ LONDON; DEHLI; ICELAND; ANKARA
 
 AGRA; NORWAY; ENGLAND; GWALIOR
 ```
-#### SAMPLE OUTPUT 0
+#### SAMPLE OUTPUT 1
 ```
 +E++++++++
 +N++++++++
@@ -320,13 +320,68 @@ function getArrayMutations(arr, perms = [], len = arr.length) {
 ---
 
 ### Ways to Climb a Staircase
-https://www.hackerrank.com/challenges/ctci-recursive-staircase/problem
+You have a number of staircases in your house and you like to climb each staircase 1, 2 or 3 steps at a time. How many ways there are to reach the top of the staircases?
+Given the respective heights for each of the *s* staircases in your house, find and print the number of ways you can climb each staircase, modulo 10^10 + 7 on a new line.
+For example, there is *s* =1 staircase in the house that is *n* = 1 steps high. You can step on the following sequences of steps:
+```
+1 1 1 1 1
+1 1 1 2
+1 1 2 1
+1 2 1 1
+2 1 1 1
+1 2 2
+2 2 1
+2 1 2
+1 1 3
+1 3 1
+3 1 1
+2 3 
+3 2
+```
+There are 13 possible ways he can take these 5 steps. 13%10000000007  = 13
+#### FUNCTION DESCRIPTION
+Complete the *stepPerms* function in the editor below. It should recursively calculate and return the integer number of ways you can climb the staircase, modulo 10000000007.
+stepPerms has the following parameter(s):
+- *n*: an integer, the number of stairs in the staircase.
+#### INPUT FORMAT
+The first line contains a single integer, *s*, the number of staircases in your house.
+Each of the following *s* lines contains a single integer, *n*, the height of staircase *i*.
+#### CONSTRAINTS
+- 1 <= *s* <= 5
+- 1 <= *n* <=36
+#### OUTPUT FORMAT
+For each staircase, return the number of ways you can climb it as an integer.
+#### SAMPLE INPUT 0
+```
+3
+1
+3
+7
+```
+#### SAMPLE OUTPUT 0
+```
+1
+4
+44
+```
+#### EXPLANATION
+Let's calculate the number of ways of climbing the first two of the 3 staircases:
+1. The first staircase only has *n* = 1 step, so there is only one way for him to climb it (i.e., by jumping 1 step). Thus, we print 1  on a new line.
+2. The second staircase has *n* = 3 steps and you can climb it in any of the four following ways:
+    1. 1 → 1 → 1
+    2. 1 → 2
+    3. 2 → 1
+    4. 3
+ Thus, we print 4 on a new line.
+ #### SOLUTION
+ 
+ ---
 
 ### [Minimum Steps To One](https://leetcode.com/discuss/interview-question/538568/google-onsite-min-operations-to-reduce-number-to-1)
 Given an integer as an input, *num*, return the *fewest* operations, or steps, needed to arrive at **1**, when you can only perform **3** operations:
 
 - **Divide by 3**, if *num* is divisible by 3
-- **Divide by 2**, if *num* is divisible by 2
+- **Divide by 2**, if *num* is divisible by 2^10 + 7 on a new line.
 - **Subtract 1**
 
 **For example:** given an input of **5**, there are many paths to arrive at **1**. You can **subtract 1 five times** to arrive at **1**. But that isn't the shortest path. The largest step you can take first is to **subtract 1**, which gets you to **4**. Then you can **divide by 2**, which gets you to **2**. Finally, you **subtract 1**, which gets you to **1**. So in total, we performed **3** operations: **5 => 4 => 2 => 1**
