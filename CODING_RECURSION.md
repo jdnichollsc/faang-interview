@@ -1,5 +1,45 @@
-
+## Coding Interview Prep
+---
 ### Fibonacci Numbers
+*The Fibonacci Sequence*
+The Fibonacci sequence appears in nature all around us, in the arrangement of seeds in a sunflower and the spiral of a seashell for example.
+The Fibonacci sequence begins with *fibonacci(0) = 0* and *fibonacci(1) = 1* as its first and second terms. After these first two elements, each subsequent element is equal to the sum of the previous two elements.
+Programmatically:
+- *fibonacci(0) = 0*
+- *fibonacci(1) = 1*
+- *fibonacci(n) = fibonacci(n-1) + fibonacci(n-2)*
+Given *n*, return the *n*^th number in the sequence.
+As an example, *n* = 5. The Fibonacci sequence to 6 is ***fs*** = [**0, 1, 1, 2, 3, 5, 8**]. With zero-based indexing, ***fs[5]*** = **5**.
+#### FUNCTION DESCRIPTION
+Complete the recursive function *fibonacci* in the editor below. It must return the *n*^th element in the Fibonacci sequence.
+fibonacci has the following parameter(s):
+- *n*: the integer index of the sequence to return
+#### INPUT FORMAT
+The input line contains a single integer, *n*.
+#### CONSTRAINTS
+- 0 <= *n* <= 30
+#### OUTPUT FORMAT
+Existing stub code in the editor prints the integer value returned by the *fibonacci* function.
+#### SAMPLE INPUT
+```
+3
+```
+#### SAMPLE OUTPUT
+```
+2
+```
+#### EXPLANATION
+The Fibonacci sequence begins as follows:
+*fibonacci(0)* = 0
+*fibonacci(1)* = 1
+*fibonacci(2)* = (0 + 1) = 1
+*fibonacci(3)* = (1 + 1) = 2
+*fibonacci(4)* = (1 + 2) = 3
+*fibonacci(5)* = (2 + 3) = 5
+*fibonacci(6)* = (3 + 5) = 8
+...
+We want to know the value of *fibonacci(3)*. In the sequence above, *fibonacci(3)* evaluates to 2.
+#### SOLUTION
 ```python
 def fibonacci(n):
     if (n == 0 or n == 1): return n
@@ -9,6 +49,77 @@ def fibonacci(n):
 ---
 
 ### Recursive Digit Sum
+ We define the super digit of an integer *x* using the following rules:
+ Given an integer, we need to find the *super digit* of the integer
+ . If *x* has only 1 digit, then its super digit is *x*
+ - Otherwise, the super digit of *x* is equal to the super digit of the sum of the digits of *x*
+ For example, the super digit of 9875 will be calculated as:
+ ```
+ super_digit(9875)   9+8+7+5 = 29
+ super_digit(29)     2+9 = 11
+ super_digit(11)     1+1 = 2
+ super_digit(2)      = 2
+ ```
+ You are given two numbers *n*and *k*. The number *p* is created by concatenating the string *n k* times. Continuing the above example where *n = 9875*, assume your value *k = 4*. Your initial *p = 9875 9875 9875 9875 (spaces added for clarity).
+ ```
+ superDigit(p) = superDigit(9875987598759875) 
+                 5+7+8+9+5+7+8+9+5+7+8+9+5+7+8+9 = 116
+ superDigit(p) = superDigit(116)
+                 1+1+6 = 8
+ superDigit(p) = superDigit(8)
+ ```
+ All of the digits of *p* sum to 116. The digits of 116 sum to 8, 8 is only one digit, so it's the super digit.
+ #### FUNCTION DESCRIPTION
+ Complete the function *superDigit*  in the editor below. It must return the calculated super digit as an integer.
+ superDigit has the following parameter(s):
+ - *n*: a string representation of an integer
+ - *k*: an integer, the times to concatenate *n* to make *p*
+ #### INPUT FORMAT
+ The first line contains two space separated integers, *n* and *k*
+ #### CONSTRAINTS
+- 1 <= *n* <= 10^100000
+- 1 <= *K* <= 10^5
+#### OUTPUT FORMAT
+Return the super digit of *p*, where *p* is created as described above.
+#### SAMPLE INPUT 0
+```
+148 3
+```
+#### SAMPLE OUTPUT 0
+```
+3
+```
+#### EXPLANATION 0
+Here *n* = 148 and *k* = 3, so *P* = 148148148
+```
+super_digit(P) = super_digit(148148148) 
+               = super_digit(1+4+8+1+4+8+1+4+8)
+               = super_digit(39)
+               = super_digit(3+9)
+               = super_digit(12)
+               = super_digit(1+2)
+               = super_digit(3)
+               = 3
+```
+#### SAMPLE INPUT 1
+```
+123 3
+```
+#### SAMPLE OUTPUT 1
+```
+9
+```
+#### EXPLANATION 1
+Here *n* = 123 and *k* = 3, so *P* = 123123123
+```
+super_digit(P) = super_digit(123123123) 
+               = super_digit(1+2+3+1+2+3+1+2+3)
+               = super_digit(18)
+               = super_digit(1+8)
+               = super_digit(9)
+               = 9
+```
+#### SOLUTION
 ```js
 // Complete the digitSum function below.
 function superDigit(n, k) {
@@ -21,6 +132,95 @@ function superDigit(n, k) {
 ---
 
 ### Crossword Puzzle
+A 10x10 Crossword grid is provided to you, along with a set of names of places which need to be filled into the grid. Cells are marked either + or -. Cells marked with a - are to be filled with the word list.
+The following shows an example crossword from the input *crossword* grid and the list of words to fit, *words* = [*POLAND, LHASA, SPAIN, INDIA*]:
+```
+Input           Output
+
+++++++++++      ++++++++++
++------+++      +POLAND+++
++++-++++++      +++H++++++
++++-++++++      +++A++++++
++++-----++      +++SPAIN++
++++-++-+++      +++A++N+++
+++++++-+++      ++++++D+++
+++++++-+++      ++++++I+++
+++++++-+++      ++++++A+++
+++++++++++      ++++++++++
+
+POLAND; LHASA; SPAIN; INDIA
+```
+#### FUNCTION DESCRIPTION
+Complete the *crosswordPuzzle* function in the editor below. It should return an array of strings, each representing a row of the finished puzzle.
+crosswordPuzzle has the following parameter(s):
+- *crossword*: an array of 10 strings of length 10 representing the empty grid
+- *words* a string consisting of semicolon delimited strings to fit into *crossword*
+#### INPUT FORMAT
+Each of the first 10 lines represents *crossword[i]*, each of which has 10 characters, *crossword[i][j]*.
+The last line contains a string consisting of semicolon delimited *words[i]* to fit.
+#### CONSTRAINTS
+- 1 <= |*words*| <= 10
+*crossword[i][j]* ϵ {+,-}
+*words[i][j]* ϵ *ascii[A-Z]*
+#### OUTPUT FORMAT
+Position the words appropriately in the 10x10 grid, then return your array of strings for printing.
+#### SAMPLE INPUT 0
+```
++-++++++++
++-++++++++
++-++++++++
++-----++++
++-+++-++++
++-+++-++++
++++++-++++
+++------++
++++++-++++
++++++-++++
+
+LONDON; DEHLI; ICELAND; ANKARA
+```
+#### SAMPLE OUTPUT 0
+```
++L++++++++
++O++++++++
++N++++++++
++DHELI++++
++O+++C++++
++N+++E++++
++++++L++++
+++ANKARA++
++++++N++++
++++++D++++
+```
+#### SAMPLE INPUT 0
+```
++-++++++++
++-++++++++
++-------++
++-++++++++
++-++++++++
++------+++
++-+++-++++
++++++-++++
++++++-++++
+++++++++++
+
+AGRA; NORWAY; ENGLAND; GWALIOR
+```
+#### SAMPLE OUTPUT 0
+```
++E++++++++
++N++++++++
++GWALIOR++
++L++++++++
++A++++++++
++NORWAY+++
++D+++G++++
++++++R++++
++++++A++++
+++++++++++
+```
+#### SOLUTION
 ```js
 function crosswordPuzzle(crossword, hints) {
     const blankWords = findBlankWords(crossword)
