@@ -4,6 +4,7 @@
 There is a connected undirected graph where each of the nodes is a color. Given a color, find the shortest path connecting any two nodes of that color. Each edge has a weight of 1. If there is not a pair or if the color is not found, print -1.
 For example, given *graph_nodes* and 4 edges *g_from* = [1, 2, 2, 3] and *g_to* = [2, 3, 4, 5] and colors for each node are *arr* = [1, 2, 3, 1, 3] we can draw the following graph:
 ![Description](https://s3.amazonaws.com/hr-assets/0/1529952915-a96eba7baa-nearestcloneexample.png)
+
 Each of the nodes is labeled [node]/[color] and is colored appropriately. If we want the shortest path between color 3, blue, we see there is a direct path between nodes 3 and 5. For green, color 1, we see the path length 2 from 1 → 2 → 4. There is no pair for node 4 having color 2, red.
 #### Function Description
 Complete the *findShortest* function in the editor below. It should return an integer representing the length of the shortest path between two nodes of the same color, or -1 if it is not possible.
@@ -38,6 +39,7 @@ Print the single integer representing the smallest path length or -1
 `1`
 #### Explanation 0
 ![Explanation](https://s3.amazonaws.com/hr-assets/0/1529953948-1e4fee4daf-nearestclonesample0.png)
+
 In the above image the distance between the closest nodes having color label 1 is 1
 #### Sample Input 1
 ```
@@ -52,6 +54,7 @@ In the above image the distance between the closest nodes having color label 1 i
 `-1`
 #### Explanation 1
 ![Explanation](https://s3.amazonaws.com/hr-assets/0/1530566003-c7e0b27b06-nearestclonesample1.png)
+
 #### Sample Input 2
 ```
 5 4      
@@ -66,6 +69,7 @@ In the above image the distance between the closest nodes having color label 1 i
 `3`
 #### Explanation 2
 ![Explanation](https://s3.amazonaws.com/hr-assets/0/1530566304-daec2771f0-nearestclonesample2.png)
+
 #### SOLUTION
 
 ---
@@ -75,6 +79,7 @@ The kingdom has cities connected by bidirectional roads. There is a unique path 
 Each of the roads takes an amount of time to destroy, and only one can be worked on at a time. Given a list of edges and times, determine the minimum time to stop the attack.
 For example, there are *n = 5* cities called 0 - 4. Three of them have machines and are colored red. The time to destroy is shown next to each road. If we cut the two green roads, there are no paths between any two machines. The time required is 3 + 2 = 5
 ![Explanation](https://s3.amazonaws.com/hr-assets/0/1528209077-f7699103c6-matrixExample.png)
+
 #### Function Description
 Complete the *minTime* in the editor below. It must return an integer representing the minimum time to cut off access between the machines.
 minTime has the following parameter(s):
@@ -105,6 +110,7 @@ Return an integer representing the minimum time required to disrupt the connecti
 `10`
 #### Explanation 0
 ![Explanation](https://s3.amazonaws.com/hr-assets/0/1528209926-cda6d7fb35-matrixSample.png)
+
 The machines are located at the cities 0, 2 and 4. You can destroy the green roads resulting in a time of 5 + 5 = 10. Destroying the road between cities 2 and 1 instead of between 1 and 0 would work, but it's not minimal.
 #### SOLUTION
 
@@ -121,7 +127,37 @@ If one or more filled cells are also connected, they form a *region*. Note that 
 
 Given an *n x m* matrix, find and print the number of cells in the largest *region* in the matrix.
 
+#### Function Description
+Complete the *maxRegion*  in the editor below. It must return an integer value, the size of the largest region.
+maxRegion has the following parameter(s):
+- *grid*: a two dimensional array of integers
+#### Input Format
+The first line contains an integer *n*, the number of rows in the matrix, *grid*
+The second line contains an integer, *m*, the number of columns in the matrix.
+Each of the following *n* lines contains a row of *m* space-separated integers, *grid[i][j]*
+#### Constraints
+- 0 < *n, m* < 10
+- *grid[i][j]* ϵ {0, 1}
+#### Output Format
+Print the number of cells in the largest *region* in the given matrix.
+#### Sample Input
+```
+4
+4
+1 1 0 0
+0 1 1 0
+0 0 1 0
+1 0 0 0
+```
+#### Sample Output
+`5`
+#### Explanation
+The diagram below depicts two regions of the matrix:
 
+![Explanation](https://s3.amazonaws.com/hr-assets/0/1528205939-1a630369ad-connectedSample.png)
+
+
+The first region has five cells and the second region has one cell. We choose the larger region.
 #### SOLUTION
 
 ---
