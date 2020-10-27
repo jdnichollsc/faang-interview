@@ -15,8 +15,8 @@ FAANG engineering interview process
   * [Stacks](./CODING_STACKS.md)
   * [Queues](./CODING_QUEUES.md)
   * [Graphs](./CODING_GRAPHS.md)
-- Behavioral
-- Design
+- [Behavioral](./BEHAVIORAL.md)
+- [Design](./DESIGN.md)
 
 ## Coding problem sites
 - [ ] [Leetcode](https://leetcode.com/problemset/all)
