@@ -321,7 +321,7 @@ function getArrayMutations(arr, perms = [], len = arr.length) {
 
 ### Ways to Climb a Staircase
 You have a number of staircases in your house and you like to climb each staircase 1, 2 or 3 steps at a time. How many ways there are to reach the top of the staircases?
-Given the respective heights for each of the *s* staircases in your house, find and print the number of ways you can climb each staircase, modulo 10^10 + 7 on a new line.
+Given the respective heights for each of the *s* staircases in your house, find and print the number of ways you can climb each staircase, module 10^10 + 7 on a new line.
 For example, there is *s* =1 staircase in the house that is *n* = 1 steps high. You can step on the following sequences of steps:
 ```
 1 1 1 1 1
@@ -374,7 +374,27 @@ Let's calculate the number of ways of climbing the first two of the 3 staircases
     4. 3
  Thus, we print 4 on a new line.
  #### SOLUTION
- 
+ ```csharp
+// Recursion
+static Dictionary<int, int> cache = new Dictionary<int, int>();
+static int stepPerms(int n) {
+    if (n == 1 || n == 2) return n;
+    if (n == 3) return 4;
+    if (!cache.ContainsKey(n)) {
+        cache[n] = stepPerms(n-1) + stepPerms(n-2) + stepPerms(n-3);
+    }
+    return cache[n];
+}
+// Dynamic Programming
+static int stepPerms(int n) {
+    var dp = new int[Math.Max(n+1, 4)];
+    dp[1] = 1; dp[2] = 2; dp[3] = 4;
+    for (var i = 4; i <= n; i++) {
+        dp[i] = dp[i-1] + dp[i-2] + dp[i-3];
+    }
+    return dp[n];
+}
+ ```
  ---
 
 ### [Minimum Steps To One](https://leetcode.com/discuss/interview-question/538568/google-onsite-min-operations-to-reduce-number-to-1)
