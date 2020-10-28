@@ -71,6 +71,58 @@ In the above image the distance between the closest nodes having color label 1 i
 ![Explanation](https://s3.amazonaws.com/hr-assets/0/1530566304-daec2771f0-nearestclonesample2.png)
 
 #### SOLUTION
+```js
+function findShortest(graphNodes, graphFrom, graphTo, ids, val) {
+    // solve here
+    let startIndex = null
+    // Generate Adjacency List
+    const nodes = graphFrom.reduce((nodes, from, index) => {
+        const fromIndex = from - 1
+        const toIndex = graphTo[index] - 1
+        nodes[fromIndex] = nodes[fromIndex] || []
+        nodes[fromIndex].push(toIndex)
+        nodes[toIndex] = nodes[toIndex] || []
+        nodes[toIndex].push(fromIndex)
+        if (ids[fromIndex] === val && startIndex === null) startIndex = fromIndex
+        else if (ids[toIndex] === val && startIndex === null) startIndex = toIndex
+        return nodes
+    }, [])
+    
+    const bfs = []
+    bfs[startIndex] = {
+        distance: 0,
+        predecessor: null,
+        color: val
+    }
+    const queue = []
+    queue.push(startIndex)
+    let minDistance = -1
+    while (queue.length) {
+        const current = queue.shift()
+        if (!nodes[current]) return -1
+        for (let i = 0; i < nodes[current].length; i++) {
+            const nodeIndex = nodes[current][i]
+            if (!bfs[nodeIndex]) {
+                let distance = bfs[current].distance + 1
+                if (ids[nodeIndex] === val && (
+                    minDistance === -1 ||
+                    minDistance > distance
+                )) {
+                    minDistance = distance
+                    distance = 0
+                }
+                bfs[nodeIndex] = {
+                    distance,
+                    predecessor: current,
+                    color: val
+                }
+                queue.push(nodeIndex)
+            }
+        }
+    }
+    return minDistance
+}
+```
 
 ---
 
