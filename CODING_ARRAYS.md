@@ -548,5 +548,59 @@ After the third update list will be 100 200 200 200 100.
 
 The required answer will be 200.
 #### SOLUTION
+- Brute force 1 - O(n*k)
+```js
+function arrayManipulation(n, queries) {
+    const operations = new Array(n).fill(0)
+    let maxValue = 0
+    for (let i = 0; i < queries.length; i++) {
+        const a = queries[i][0]
+        const b = queries[i][1]
+        const k = queries[i][2]
+        for (let j = a - 1; j < b; j++) {
+            operations[j] += k
+            if (operations[j] > maxValue) maxValue = operations[j]
+        }
+    }
+    return maxValue 
+}
+```
+- Brute force 2 - O(n*k)
+```js
+function arrayManipulation(n, queries) {
+    let maxValue = 0
+    for (let i = 1; i <= n; i++) {
+        let value = 0
+        for (let j = 0; j < queries.length; j++) {
+            const a = queries[j][0]
+            const b = queries[j][1]
+            const k = queries[j][2]
+            if (a <= i && i <= b) value += k
+        }
+        if (value > maxValue) maxValue = value
+    }
+    return maxValue
+}
+```
+- Optimal solution - O(k+n)
+```js
+function arrayManipulation(n, queries) {
+    const operations = new Array(n).fill(0)
+    let maxValue = 0
+    for (let i = 0; i < queries.length; i++) {
+        const a = queries[i][0]
+        const b = queries[i][1]
+        const k = queries[i][2]
+        operations[a-1] += k
+        operations[b] -= k
+    }
+    let sum = 0
+    for (let i = 0; i < n; i++) {
+        sum += operations[i]
+        maxValue = Math.max(sum, maxValue)
+    }
+    return maxValue
+}
+```
 
 ---
