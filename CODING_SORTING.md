@@ -1,6 +1,8 @@
-## Coding Interview Prep
+## Sorting Algorithms
+
 ---
-### Maximum Number of Toys to Buy
+### [Maximum Number of Toys to Buy](https://www.hackerrank.com/challenges/mark-and-toys/problem)
+
 A parent goes to the store to buy toys for their child. The parent has only a certain amount to spend, and they want to maximize the number of toys they buy with their money.
 Given a list of prices and an amount to spend, what is the maximum number of toys the parent can buy? For example, if **prices** = [**1,2,3,4**] and parent has ***k*** = **7**
 to spend, they can buy items [**1,2,3**] for 6, or [**3,4**] for 7 units of currency. They would choose the first group of 3 items.
@@ -49,7 +51,8 @@ function maximumToys(prices, k) {
 
 ---
 
-### Fraudulent Activity Notifications
+### [Fraudulent Activity Notifications](https://www.hackerrank.com/challenges/fraudulent-activity-notifications/problem)
+
 HackerLand National Bank has a simple policy for warning clients about possible fraudulent account activity. If the amount spent by a client on a particular day is *greater than or equal to* **2** x the client's median spending for a trailing number of days, they send the client a notification about potential fraud. The bank doesn't send the client any notifications until they have at least that trailing number of prior days' transaction data.
 Given the number of trailing days ***d*** and a client's total daily expenditures for a period of ***n*** days, find and print the number of times the client will receive a notification over all  ***n*** days. 
 For example, ***d*** = ***3***, and ***expenditures*** = ***[10, 20, 30, 40, 50]***. On the first three days, they just collect spending data. At day **4**, we have trailing expenditures of  **[10, 20, 30]**. The median is 20 and the day's expenditure is 40. Because **40** >= **2** x **20**, there will be a notice. The next day, our trailing expenditures are **[20, 30, 40]** and the expenditures are 50. This is less than **2** x **30** so no notice will be sent. Over the period, there was one notice sent..
@@ -128,11 +131,13 @@ function activityNotifications(expenditure, d) {
 
 ---
 
-### Counting Inversions
-https://www.hackerrank.com/challenges/ctci-merge-sort/problem
+### [Counting Inversions](https://www.hackerrank.com/challenges/ctci-merge-sort/problem)
+
 In an array, ***arr***, the elements at indices ***i*** and ***j*** (where *i* < *j*) form an inversion if *arr[i]* > *arr[j]*. In other words, inverted elements *arr[i]* and *arr[j]* are considered to be "out of order". To correct an inversion, we can swap adjacent elements.
 For example, consider the dataset  *arr* = [**2,4,1**]. It has two inversions: (**4,1**)and (**2,1**). To sort the array, we must perform the following two swaps to correct the inversions:
-SUBIR IMAGEN!PENDIENTE!
+
+![Counting Inversions](img/counting_inversions.png)
+
 Given *d* datasets, print the number of inversions that must be swapped to sort each dataset on a new line.
 #### Function Description
 Complete the function *countInversions* in the editor below. It must return an integer representing the number of inversions required to sort the array.
@@ -165,8 +170,40 @@ For each of the *d* datasets, return the number of inversions that must be swapp
 #### Explanation 
 We sort the following *d* = 2 datasets:
 
-SUBIR IMAGEN PENDIENTE!!
+1. arr = [1, 1, 1, 2, 2] is already sorted, so there are no inversions for us to correct. Thus, we print 0 on a new line.
+2. ![Swaps](img/counting_inversions_swaps.png)
 
 We performed a total of 1 + 2 + 1 = 4 swaps to correct inversions.
+
+#### SOLUTION
+```js
+let swipes = 0
+function countInversions(arr) {
+  swipes = 0;
+  mergeSort(arr);
+  return swipes;
+}
+
+function mergeSort(arr) {
+  if(arr.length <= 1) return arr;
+  const mid = Math.ceil(arr.length / 2);
+  const left = mergeSort(arr.splice(0, mid));
+  const right = mergeSort(arr.splice(-mid));
+  const result = [];
+  while(left.length && right.length){
+    if(left[0] > right[0]) {
+      swipes += left.length
+      result.push(right.shift());
+    } else {
+      result.push(left.shift());
+    }
+  }
+  return [
+    ...result,
+    ...left,
+    ...right
+  ];
+}
+```
 
 ---
