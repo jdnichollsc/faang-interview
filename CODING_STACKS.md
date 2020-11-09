@@ -1,6 +1,8 @@
-## Coding Interview Prep
+## Stacks
+
 ---
-### Balanced Brackets
+### [Balanced Brackets](https://www.hackerrank.com/challenges/balanced-brackets/problem)
+
 A bracket is considered to be any one of the following characters: (, ), {, }, [ or ].
 Two brackets are considered to be a *matched pair* if the an opening bracket (i.e., (, [ or {) occurs to the left of a closing bracket (i.e., ), ] or } *of the exact same type*. There are three types of matched pairs of brackets: [], {}, ().
 A matching pair of brackets is *not balanced* if the set of brackets it encloses are not matched. For example, {[)])} is not balanced because the contents in between { and } are not balanced. The pair of square brackets encloses a single, unbalanced opening bracket, [, and the pair of parentheses encloses a single, unbalanced closing square bracket, ].By this logic, we say a sequence of brackets is *balanced* if the following conditions are met:
@@ -67,10 +69,11 @@ function isBalanced(s) {
 
 ---
 
-### Largest Rectangle
- is planning to demolish a number of old, unoccupied buildings and construct a shopping mall in their place. Your task is to find the largest solid area in which the mall can be constructed.
- There are a number of buildings in a certain two-dimensional landscape. Each building has a height, given by *h[i]* where *i* represents the building number. If you join*k* adjacent buildings, they will form a solid rectangle of area *k* * [the minimum height of the adjacent buildings].
- For example, the heights array  h = [3,2,3]. A rectangle of height h = 2 and length k = 3 can be constructed within the boundaries. The area formed is h*k = 2*3 = 6.
+### [Largest Rectangle](https://www.hackerrank.com/challenges/largest-rectangle/problem)
+
+A *real state company* is planning to demolish a number of old, unoccupied buildings and construct a shopping mall in their place. Your task is to find the largest solid area in which the mall can be constructed.
+There are a number of buildings in a certain two-dimensional landscape. Each building has a height, given by *h[i]* where *i* represents the building number. If you join*k* adjacent buildings, they will form a solid rectangle of area *k* * [the minimum height of the adjacent buildings].
+For example, the heights array  h = [3,2,3]. A rectangle of height h = 2 and length k = 3 can be constructed within the boundaries. The area formed is h*k = 2*3 = 6.
 #### Function Description
 Complete the *largestRectangle* in the editor below. It should return an integer representing the largest rectangle that can be formed within the bounds of consecutive buildings.
 largestRectangle has the following parameter(s):
@@ -96,11 +99,10 @@ Print a long integer representing the maximum area of rectangle formed.
 An illustration of the test case follows.
 ![Explanation](https://s3.amazonaws.com/hr-challenge-images/8136/1436794554-75e178e325-drawing47.svg)
 #### SOLUTION
+- Brute force, Time complexity => O (n*n)
 ```js
 // Complete the largestRectangle function below.
 function largestRectangle(h) {
-    
-    /* Time complexity => O (n*n)
     let maxArea = 0
     const maxHeight = h.length < 100 ? Math.max(...h) : Math.pow(10, 6)
     for (let i = 2; i < maxHeight; i++) {
@@ -119,9 +121,13 @@ function largestRectangle(h) {
         const newArea = Math.max(maxBuildings, tempBuildings) * i
         if (newArea > maxArea) maxArea = newArea
     }
-    return maxArea*/
-
-    // Time complexity => O(n)
+    return maxArea
+}
+```
+- Optimal solution, Time complexity => O(n)
+```js
+// Complete the largestRectangle function below.
+function largestRectangle(h) {
     const positions = []
     const heights = [...h, 0]
     let area = 0
@@ -141,7 +147,8 @@ function largestRectangle(h) {
 
 ---
 
-### Min Max Riddle
+### [Min Max Riddle](https://www.hackerrank.com/challenges/min-max-riddle/problem)
+
 Given an integer array of size *n*, find the maximum of the minimum(s) of every window size in the array. The window size varies from 1 to *n*.
 For example, given *arr* = [6, 3, 5, 1, 12], consider window sizes of 1 through 5. Windows of size 1 are (6), (3), (5), (1), (12). The maximum value of the minimum values of these windows is 12. Windows of size 2 aare (6, 3), (3, 5), (5, 1), (1, 12) and their minima are (3, 3, 1, 1). The maximum of these values is 3. Continue this process through window size 5 to finally consider the entire array. All of the answers are 12, 3, 3, 1, 1.
 #### Function Description
@@ -168,7 +175,12 @@ Single line containing *n* space-separated integers denoting the output for each
 #### Explanation 0
 Here *n* = 4 *arr* = [2, 6, 1, 12]
 
-TABLA PENDIENTE!!! EJERCICIO 37
+| window size | window1 | window2 | window3 | window4 | maximum of all windows |
+| ----------- | ------- | ------- | ------- | ------- | ---------------------- |
+| 1 | 2 | 6 | 1 | 12 | 12 |
+| 2 | 2 | 1 | 1 |    | 2  |
+| 3 | 1 | 1 |   |    | 1  |
+| 4 | 1 |   |   |    | 1  |
 
 #### Sample Input 1
 ```
@@ -182,14 +194,42 @@ TABLA PENDIENTE!!! EJERCICIO 37
 #### Explanation 1
 Here *n* = 7 *arr* = [1, 2, 3, 5, 1, 13, 3]
 
-TABLA PENDIENTE!!! EJERCICIO 37
+| win size | w_1 | w_2 | w_3 | w_4 | w_5 | w_6 | w_7 | maximum of all windows |
+| -------- | --- | --- | --- | --- | --- | --- | --- | ---------------------- |
+| 1	| 1	| 2	| 3	| 5	| 1	| 13 | 3 | 13 |
+| 2	| 1	| 2	| 3	| 1	| 1	| 3	 | 	 | 3  |
+| 3	| 1	| 2	| 1	| 1	| 1	| 	 | 	 | 2  |
+| 4	| 1	| 1	| 1	| 1	| 	| 	 | 	 | 1  |
+| 5	| 1	| 1	| 1	| 	| 	| 	 | 	 | 1  |
+| 6	| 1	| 1	|  	| 	| 	| 	 | 	 | 1  |
+| 7	| 1	|  	|  	| 	| 	| 	 | 	 | 1  |
+
+#### Sample Input 2
+```
+6
+3 5 4 7 6 2
+```
+#### Sample Output 2
+```
+7 6 4 4 3 2
+```
+#### Explanation 2
+Here *n* = 6 *arr* = [3, 5, 4, 7, 6, 2]
+
+| win size | w_1 | w_2 | w_3 | w_4 | w_5 | w_6 | maximum of all windows |
+| -------- | --- | --- | --- | --- | --- | --- | ---------------------- |
+| 1	       |  3	 |  5	 |  4	 |  7	 |  6	 |  2	 | 7 |
+| 2	       |  3	 |  4	 |  4	 |  6	 |  2	 |   	 | 6 |
+| 3	       |  3	 |  4	 |  4	 |  2	 |   	 |   	 | 4 |
+| 4	       |  3	 |  4	 |  2	 |  	 |   	 |   	 | 4 |
+| 5	       |  3	 |  2	 |  	 |  	 |   	 |   	 | 3 |
+| 6	       |  2	 |  	 |  	 |  	 |   	 |   	 | 2 |
 
 #### SOLUTION
+- Brute force, Time complexity => O (n*n)
 ```js
 // Complete the solve function below.
 function riddle(arr) {
-    // solve here
-    /* Time complexity => O (n*n)
     const stack = arr
     const windowSizes = []
     for (let i = 0; i < arr.length; i++) {
@@ -201,9 +241,13 @@ function riddle(arr) {
         }
         windowSizes.push(maxSize)
     }
-    return windowSizes*/
-    
-    // Time complexity => O(n)
+    return windowSizes
+}
+```
+- Optimal solution, Time complexity => O(n)
+```js
+// Complete the solve function below.
+function riddle(arr) {
     arr.push(0)
     const n = arr.length
     const windowSizes = new Array(arr.length).fill(0)
@@ -226,12 +270,12 @@ function riddle(arr) {
     windowSizes.pop()
     return windowSizes
 }
-
 ```
 
 ---
 
-### Poisonous Plants
+### [Poisonous Plants](https://www.hackerrank.com/challenges/poisonous-plants/problem)
+
 There are a number of plants in a garden. Each of these plants has been treated with some amount of pesticide. After each day, if any plant has more pesticide than the plant on its left it dies.
 You are given the initial values of the pesticide in each of the plants. Print the number of days after which no plant dies, i.e. the time after which there are no plants with more pesticide content than the plant to their left.
 For example, pesticide levels *p* = [3, 6, 2, 7, 5]. Using a 1-indexed array, day 1 plants 2 and 4 die leaving *p* = [3, 2, 5]. On day 2, plant 3 of the current array dies leaving *p* = [3, 2]. As there is no plant with a higher concentration of pesticide than the one to its left, plants stop dying after day 2.
@@ -266,3 +310,20 @@ Plants = [6, 5, 4]
 After the 2^nd day the plants stop dying.
 #### SOLUTION
 ---
+```js
+function poisonousPlants(p) {
+    const stack = []
+    let numberOfDays = 0
+    for (let i = p.length - 1; i >= 0; i--) {
+        let tempDays = 0
+        while (stack.length && p[i] < stack[stack.length-1][0]) {
+            tempDays++
+            const [level, days] = stack.pop()
+            tempDays = Math.max(tempDays, days)
+        }
+        numberOfDays = Math.max(numberOfDays, tempDays)
+        stack.push([p[i], tempDays])
+    }
+    return numberOfDays
+}
+```
