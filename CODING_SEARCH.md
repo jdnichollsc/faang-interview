@@ -1,6 +1,7 @@
-## Coding Interview Prep
+## Search
 ---
-### Minimum Time Required
+### [Minimum Time Required](https://www.hackerrank.com/challenges/minimum-time-required/problem)
+
 You are planning production for an order. You have a number of machines that each have a fixed number of days to produce an item. Given that all the machines operate simultaneously, determine the minimum number of days to produce the required order.
 For example, you have to produce *goal* 10 items. You have three machines that take *machines* [2, 3, 2] days to produce an item. The following is a schedule of items produced:
 ```
@@ -54,10 +55,10 @@ In 7 minutes *machine 0* can produce 7 items, *machine 1* can produce 2 items an
 #### Explanation 2
 In 20 daya *machine 0* can produce 5 items, *machine 1* can produce 4 and *machine 2* can produce 3. 
 #### SOLUTION
+- Brute force
 ```js
 // Complete the minTime function below.
 function minTime(machines, goal) {
-    /* BRUTE FORCE
     const dayMachines = {}
     for (let i = 0; i < machines.length; i++) {
         const day = dayMachines[machines[i]]
@@ -81,8 +82,13 @@ function minTime(machines, goal) {
             }
         }
     }
-    return currentDay*/
-
+    return currentDay
+}
+```
+- Optimal solution
+```js
+// Complete the minTime function below.
+function minTime(machines, goal) {
     const sorted = machines.sort((a, b) => a-b)
     let low = 1
     let high = goal * sorted[sorted.length - 1]
@@ -110,7 +116,8 @@ function findItems(machines, goal, time) {
 
 ---
 
-### Making candies
+### [Making candies](https://www.hackerrank.com/challenges/making-candies/problem)
+
 You're playing a game called *CandyMaker*, where the goal is to make candies.
 You just started a level in which you must accumulate *n* candies starting with *m* machines and *w* workers. In a single *pass*, you can make *m x w* candies. After each pass, you can decide whether to spend some of your candies to buy more machines or hire more workers. Buying a machine or hiring a worker costs *p* units, and there is no limit to the number of machines you can own or workers you can employ.
 You want to minimize the number of passes to obtain the required number of candies at the end of a day. Determine that number of passes.
@@ -133,16 +140,16 @@ A single line consisting of four space-separated integers describing the values 
 - 1 <= *m, w, p, n* <= 10^12
 #### Output Format
 Return a long integer denoting the minimum number of passes required to accumulate at least *n* candies.
-#### Sample Input 0
+#### Sample Input
 ```
 3 1 2 12
 ```
-#### Sample Output 0
+#### Sample Output
 `3`
-#### Explanation 0
+#### Explanation
 You make three passes:
 1. In the first pass, you make *m x w* = 3 x 1 = 3 candies. You then spend *p = 2* of them hiring another worker, so *w = 2* and you have one candy left over.
 2. In the second pass, you make 3 x 2 = 6 candies. You then spend *2 * p* = 4 of them on another machine and another worker, so *w = 3* and *m = 4* and you has 3 candies left over.
-3. In the third pass, you make 4 x 3 = 12 candies. Because this satisfies your goal of making at least *n = 12* candies, we print the number of passes (i.e., 3) as our answer..
+3. In the third pass, you make 4 x 3 = 12 candies. Because this satisfies your goal of making at least *n = 12* candies, we print the number of passes (i.e., 3) as our answer.
 #### SOLUTION
 ---
