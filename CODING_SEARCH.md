@@ -120,7 +120,9 @@ function findItems(machines, goal, time) {
 
 You're playing a game called *CandyMaker*, where the goal is to make candies.
 You just started a level in which you must accumulate *n* candies starting with *m* machines and *w* workers. In a single *pass*, you can make *m x w* candies. After each pass, you can decide whether to spend some of your candies to buy more machines or hire more workers. Buying a machine or hiring a worker costs *p* units, and there is no limit to the number of machines you can own or workers you can employ.
+
 You want to minimize the number of passes to obtain the required number of candies at the end of a day. Determine that number of passes.
+
 For example, you start with *m* = 1 machine and *w* = 2 workers. The cost to purchase or hire, *p* = 1 and you need to accumulate 60 candies. You execute the following strategy:
 1. Make *m x w* = 1 x 2 = 2 candies. Purchase two machines.
 2. Make 3 x 2 = 6 candies. Purchase 3 machines and hire 3  workers
