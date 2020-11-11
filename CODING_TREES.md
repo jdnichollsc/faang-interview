@@ -353,8 +353,8 @@ The blue node is root, the first number in a node is node number and the second 
 #### Function Description
 Complete the *balancedForest* function in the editor below. It must return an integer representing the minimum value of *c[w]* that can be added to allow creation of a balanced forest, or -1 if it is not possible.
 balancedForest has the following parameter(s):
-- *c*:: an array of integers, the data values for each node
-- *edges*:: an array of 2 element arrays, the node pairs per edge
+- *c*: an array of integers, the data values for each node
+- *edges*: an array of 2 element arrays, the node pairs per edge
 #### INPUT FORMAT
 The first line contains a single integer, *q*, number of queries.
 Each of the following *q* sets of lines is as follows:
