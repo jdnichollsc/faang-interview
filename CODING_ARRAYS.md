@@ -135,12 +135,23 @@ When we perform **d = 4** left rotations, the array undergoes the following sequ
 **[1, 2, 3, 4, 5] -> [2, 3, 4, 5, 1] -> [3, 4, 5, 1, 2] -> [4, 5, 1, 2, 3] -> [5, 1, 2, 3, 4]**
 
 #### SOLUTION
+- Brute force
 ```js
 function rotLeft(a, d) {
   const result = [...a]
   for (let i = 0; i < d; i++) {
     const first = result.shift()
     result.push(first)
+  }
+  return result
+}
+```
+- Optimal solution
+```js
+function rotLeft(a, d) {
+  const result = [...a]
+  for (let i = 0; i < a.length; i++) {
+      result[i] = a[(i + d) % a.length]
   }
   return result
 }
