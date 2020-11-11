@@ -363,10 +363,11 @@ Each of the following *q* sets of lines is as follows:
 - Each of the following **n-1** lines contains two space-separated integers, ***x[j]*** and ***y[j]***, describing edge ***j*** connecting nodes ***x[j]*** and ***y[j]***
 
 #### CONSTRAINTS
- - 1 ≤ *q* ≤ 5
- - 1 ≤ *n* ≤ 5x10^4
- - 1 ≤ *c[i]* ≤ 0^9
- Each query forms a valid undirected tree.
+- 1 ≤ *q* ≤ 5
+- 1 ≤ *n* ≤ 5x10^4
+- 1 ≤ *c[i]* ≤ 10^9
+- Each query forms a valid undirected tree.
+
 #### OUTPUT FORMAT
 For each query, return the minimum value of the integer *c[w]*. If no such value exists, return -1 instead
 #### SAMPLE INPUT 0
