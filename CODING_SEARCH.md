@@ -155,3 +155,39 @@ You make three passes:
 3. In the third pass, you make 4 x 3 = 12 candies. Because this satisfies your goal of making at least *n = 12* candies, we print the number of passes (i.e., 3) as our answer.
 #### SOLUTION
 ---
+```js
+// Complete the minimumPasses function below.
+const getStepsRequired = (total) => (quantity) => Math.ceil(total / quantity)
+
+function minimumPasses(machines, workers, price, goal) {
+    let accumulated = 0
+    let invest = 0
+    let spend = Infinity
+    while (accumulated < goal) {
+        const capability = machines * workers
+        let steps = getStepsRequired(price - accumulated)(capability)
+        if (steps < 1) {
+            const upgrade = Math.floor(accumulated / price)
+            if (machines > workers + upgrade) {
+                workers += upgrade
+            } else if (workers > machines + upgrade) {
+                machines += upgrade
+            } else {
+                const total = machines + workers + upgrade
+                machines = Math.floor(total/2)
+                workers = total - machines
+            }
+            // Save the remaining money
+            accumulated = accumulated % price
+            steps = 1
+        }
+        const newCapability = machines * workers
+        accumulated += steps * newCapability
+        invest += steps
+        const remaining = goal - accumulated
+        const increment = getStepsRequired(remaining)(newCapability)
+        spend = Math.min(spend, invest + increment)
+    }
+    return Math.min(invest, spend)
+}
+```
