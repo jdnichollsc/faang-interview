@@ -178,7 +178,7 @@ function minimumPasses(machines, workers, price, goal) {
                 workers = total - machines
             }
             // Save the remaining money
-            accumulated = accumulated % price
+            accumulated %= price
             steps = 1
         }
         const newCapability = machines * workers
