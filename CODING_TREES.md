@@ -1,7 +1,7 @@
-## Coding Interview Prep
+## Trees
 
 ---
-### Height of a Binary Tree
+### [Height of a Binary Tree](https://www.hackerrank.com/challenges/tree-height-of-a-binary-tree/problem)
 The height of a binary tree is the number of edges between the tree's root and its furthest leaf. For example, the following binary tree is of height 2.
 
 ![Description](https://s3.amazonaws.com/hr-assets/0/1527626183-88c8070977-isitBSTSample0.png)
@@ -32,6 +32,7 @@ The longest root-to-leaf path is shown below:
 ![Explanation](https://s3.amazonaws.com/hr-assets/0/1527626088-807ca5fc63-treeDepthSample1.png)
 
 There are 4 nodes in this path that are connected by 3 edges, meaning our binary tree's *height* = 3.
+
 #### SOLUTION
 ```python
 # Enter your code here. Read input from STDIN. Print output to STDOUT
@@ -56,9 +57,9 @@ def height(root):
 
 ---
 
-### Binary Search Tree: Lowest Common Ancestor
-You are given pointer to the root of the binary search tree and two values ***v*1** and ***v*2**. You need to return the lowest common ancestor (LCA) https://en.wikipedia.org/wiki/Lowest_common_ancestor of ***v*1** and ***v*2** in the binary search tree.
-![Description] (https://s3.amazonaws.com/hr-assets/0/1529959649-81b68736f7-lcaexample.png)
+### [Binary Search Tree: Lowest Common Ancestor](https://www.hackerrank.com/challenges/binary-search-tree-lowest-common-ancestor/problem)
+You are given pointer to the root of the binary search tree and two values ***v*1** and ***v*2**. You need to return the lowest common ancestor ([LCA](https://en.wikipedia.org/wiki/Lowest_common_ancestor)) of ***v*1** and ***v*2** in the binary search tree.
+![Description](https://s3.amazonaws.com/hr-assets/0/1529959649-81b68736f7-lcaexample.png)
 
 In the diagram above, the lowest common ancestor of the nodes 4 and 6 is the node 3.
 Node 3 is the lowest node which has nodes 4 and 6 as descendants.
@@ -87,12 +88,16 @@ Return the a pointer to the node that is the lowest common ancestor of *v*1 and 
 1 7
 ```
 ![SampleInput](https://s3.amazonaws.com/hr-assets/0/1527870675-1cfffe0a8a-LCASample.png)
-*v*1 = 1 and *v*2 = 7.
+
+**v1 = 1** and **v2 = 7**.
+
 #### SAMPLE OUTPUT 0
 [reference to node 4]
+
 #### EPLANATION
 LCA of 1 and 7 is 4, the root in this case.
 Return a pointer to the node.
+
 #### SOLUTION
 ```python
 # Enter your code here. Read input from STDIN. Print output to STDOUT
@@ -116,10 +121,9 @@ def lca(root, v1, v2):
         return lca(root.right, v1, v2)
     return root
 ```
-
 ---
 
-### Swap Nodes
+### [Swap Nodes](https://www.hackerrank.com/challenges/swap-nodes/problem)
 A binary tree is a tree which is characterized by one of the following properties:
 - It can be empty (null).
 - It contains a root node only.
@@ -337,10 +341,9 @@ function printNode(node, indent = '') {
   if (!!rightChild) printNode(rightChild, indent+'  ');
 }
 ```
-
 ---
 
-### Balanced Forest
+### [Balanced Forest](https://www.hackerrank.com/challenges/balanced-forest/problem)
 There is tree of nodes containing integer data. You want to insert a node with some non-zero integer value somewhere into the tree. Your goal is to be able to cut two edges and have the values of each of the three new trees sum to the same amount. This is called a *balaced forest* . Determine the minimal amount that a new node can have to allow creation of a balanced forest. If it's not possible to create a balanced forest, return -1.
 For example, you are given node values *c* = [**15, 12, 8, 14, 13**] and *edges* = [[1,1], [1,3], [1,4], [4,5]]. It is the following tree.
 
