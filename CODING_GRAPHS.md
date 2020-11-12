@@ -269,7 +269,6 @@ const findRegion = (grid, visited, row, col) => {
         || visited[key]
     ) return 0
     visited[key] = true
-    console.log(key, grid[row][col])
     let count = 1
     count += findRegion(grid, visited, row + 1, col)
     count += findRegion(grid, visited, row, col + 1)
