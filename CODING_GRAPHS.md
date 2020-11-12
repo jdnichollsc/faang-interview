@@ -1,6 +1,6 @@
 ## Graphs
 
-### Find the Nearest Clone
+### [Find the Nearest Clone](https://www.hackerrank.com/challenges/find-the-nearest-clone/problem)
 There is a connected undirected graph where each of the nodes is a color. Given a color, find the shortest path connecting any two nodes of that color. Each edge has a weight of 1. If there is not a pair or if the color is not found, print -1.
 For example, given *graph_nodes* and 4 edges *g_from* = [1, 2, 2, 3] and *g_to* = [2, 3, 4, 5] and colors for each node are *arr* = [1, 2, 3, 1, 3] we can draw the following graph:
 ![Description](https://s3.amazonaws.com/hr-assets/0/1529952915-a96eba7baa-nearestcloneexample.png)
@@ -213,7 +213,7 @@ function minTime(roads, machines) {
 ```
 ---
 
-### DFS: Connected Cell in a Grid
+### [DFS: Connected Cell in a Grid](https://www.hackerrank.com/challenges/ctci-connected-cell-in-a-grid/problem)
 Consider a matrix where each cell contains either a 0 or a 1 and any cell containing a 1 is called a *filled* cell. Two cells are said to be *connected* if they are adjacent to each other horizontally, vertically, or diagonally. In the diagram below, the two colored regions show cells connected to the filled cells. Black on white are not connected.
 
 ![Description](https://s3.amazonaws.com/hr-assets/0/1528204809-ea89cbdef6-connected.png)
@@ -256,5 +256,46 @@ The diagram below depicts two regions of the matrix:
 
 The first region has five cells and the second region has one cell. We choose the larger region.
 #### SOLUTION
-
+```js
+const cellKey = (row) => (col) => row + '_' + col
+const findRegion = (grid, visited, row, col) => {
+    const key = cellKey(row)(col)
+    if (
+        row < 0
+        || row >= grid.length
+        || col < 0
+        || col >= grid[0].length
+        || !grid[row][col]
+        || visited[key]
+    ) return 0
+    visited[key] = true
+    console.log(key, grid[row][col])
+    let count = 1
+    count += findRegion(grid, visited, row + 1, col)
+    count += findRegion(grid, visited, row, col + 1)
+    count += findRegion(grid, visited, row + 1, col + 1)
+    count += findRegion(grid, visited, row - 1, col)
+    count += findRegion(grid, visited, row, col - 1)
+    count += findRegion(grid, visited, row - 1, col - 1)
+    count += findRegion(grid, visited, row - 1, col + 1)
+    count += findRegion(grid, visited, row + 1, col - 1)
+    return count
+}
+function maxRegion(grid) {
+    const visited = {}
+    let bigRegion = 0
+    const numColumns = grid[0].length
+    for (let row = 0; row < grid.length; row++) {
+        for (let col = 0; col < numColumns; col++) {
+            if (!visited[cellKey(row)(col)]) {
+                bigRegion = Math.max(
+                    bigRegion,
+                    findRegion(grid, visited, row, col)
+                )
+            }
+        }
+    }
+    return bigRegion
+}
+```
 ---
