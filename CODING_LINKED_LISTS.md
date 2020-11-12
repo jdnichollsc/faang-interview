@@ -152,7 +152,7 @@ function findMergeNode(headA, headB) {
 
 ---
 
-### Inserting a Node Into a Sorted Doubly Linked List
+### [Inserting a Node Into a Sorted Doubly Linked List](https://www.hackerrank.com/challenges/insert-a-node-into-a-sorted-doubly-linked-list/problem)
 Given a reference to the head of a doubly-linked list and an integer, *data*, create a new *DoublyLinkedListNode* object having data value *data* and insert it into a sorted linked list while maintaining the sort.
 #### FUNCTION DESCRIPTION
 Complete the sortedInsert function in the editor below. It must return a reference to the head of your modified DoublyLinkedList.
@@ -240,7 +240,7 @@ function sortedInsert(head, data) {
 
 ---
 
-### Insert at a Specific Position
+### [Insert at a Specific Position](https://www.hackerrank.com/challenges/insert-a-node-at-a-specific-position-in-a-linked-list/problem)
 This question is part of a tutorial track by MyCodeSchool https://www.youtube.com/user/mycodeschool  and is accompanied by a video lesson found here https://www.youtube.com/watch?v=Y0n86K43GO4 
 You’re given the pointer to the head node of a linked list, an integer to add to the list and the position at which the integer must be inserted. Create a new node with the given integer, insert this node at the desired position and return the head node.
 A position of 0 indicates head, a position of 1 indicates one node away from the head and so on. The head pointer given may be null meaning that the initial list is empty.
