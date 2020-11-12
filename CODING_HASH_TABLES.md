@@ -124,7 +124,7 @@ function twoStrings(s1, s2) {
 
 ---
 
-### Frequency Queries
+### [Frequency Queries](https://www.hackerrank.com/challenges/frequency-queries/problem)
 You are given *q* queries. The first integer in each query represents one of the following three operations:
 - **1 *x***: Insert x in your data structure.
 - **2 *y***: Delete one occurence of y from your data structure, if present.
@@ -250,7 +250,7 @@ function freqQuery(queries) {
 
 --- 
 
-### Ice Cream Shop
+### [Ice Cream Shop](https://www.hackerrank.com/challenges/ctci-ice-cream-parlor/problem)
 The Ice Cream Shop offers many flavors. Each flavor has a cost associated with it.
 Given the value of *money* and the *cost* of each flavor for *t* trips to the Ice Cream Shop, choose two *distinct* flavors such that you spend your entire pool of money during each visit. ID numbers are the *1-based* index number associated with a *cost*. For each trip to the parlor, print the ID numbers for the two types of ice cream that you purchase as two space-separated integers on a new line. You must print the smaller ID first and the larger ID second.
 For example, there are ***n*** = **5** flavors having ***cost*** = [**2, 1, 3, 5, 6**]. You have *money* = 5 to spend. You would purchase flavor ID's 1 and 3 for a cost of 2 + 3 = 5. Use 1 based indexing for your response.
@@ -317,7 +317,7 @@ function whatFlavors(cost, money) {
 
 ---
 
-### Count Triplets
+### [Count Triplets](https://www.hackerrank.com/challenges/count-triplets-1/problem)
 You are given an array and you need to find number of tripets of indices (***i, j, k***) such that the elements at those indices are in geometric progression https://en.wikipedia.org/wiki/Geometric_progression for a given common ratio *r* and  *i* < *j* < *k*.
 For example, ***arr** = [**1, 4, 16, 64**]. If *r* = 4 we have [1, 4, 16] and [4, 16, 64] at indices (0, 1, 2) and [1, 2, 3].
 #### Function Description
@@ -393,7 +393,7 @@ function countTriplets(arr, r) {
 
 ---
 
-### Count Substrings Anagrams
+### [Count Substrings Anagrams](https://www.hackerrank.com/challenges/sherlock-and-anagrams/problem)
 Two stringsare anagrams of each other if the letters of one string can be rearranged to form the other string. Given a string, find the number of pairs of substrings of the string that are anagrams of each other.
 For example *s* = *mom*, the list of all anagrammatic pairs is [*m, m*], [*mo, om*] at positions [[0], [2], [0, 1], [1, 2]] respectively.
 #### Function Description
