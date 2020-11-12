@@ -223,7 +223,7 @@ function alternatingCharacters(s) {
 ```
 ---
 
-### Character Frequencies
+### [Character Frequencies](https://www.hackerrank.com/challenges/sherlock-and-valid-string/problem)
 A string is considered to be *valid*  if all characters of the string appear the same number of times. It is also *valid*  if you can remove just 1 character anywhere in the string, and the remaining characters will occur the same number of times. Given a string ***s***, determine if it is *valid*. If so, return YES, otherwise return NO.
 - if ***s*** = *abc*, it is a valid string because frequencies are {*a* : 1, *b* : 1, *c* : 1}.
 - if ***s*** = *abcc*, it is also a valid string, because we can remove one *c* and have 1 of each character in the remaining string.
@@ -312,7 +312,7 @@ function isValid(s) {
 ```
 ---
 
-### Special Substrings
+### [Special Substrings](https://www.hackerrank.com/challenges/special-palindrome-again/problem)
 A string is said to be a *special string* if either of two conditions is met:
 - All of the characters are the same, e.g. aaa.
 - All characters except the middle one are the same, e.g. aadaa.
@@ -391,7 +391,7 @@ function substrCount(n, s) {
 ```
 ---
 
-### Common Child
+### [Common Child](https://www.hackerrank.com/challenges/common-child/problem)
 A string A is said to be a child of another string B if they match exactly, or if any number of characters in B can be deleted to form A. Given two strings of equal length, what's the longest string that can be constructed such that it is a child of both?
 For example, ABCD and ABDC  have two children with maximum length 3, ABC and ABD. They can be formed by eliminating either the D or C from both strings. Note that we will not consider ABCD as a common child because we can't rearrange characters and ABCD ≠ ABDC.
  #### FUNCTION DESCRIPTION
@@ -480,7 +480,7 @@ function commonChild(s1, s2) {
 ```
 ---
 
-### Abbreviation
+### [Abbreviation](https://www.hackerrank.com/challenges/abbr/problem)
 You can perform the following operations on the string, ***a***:
 1. Capitalize zero or more of ***a***'s lowercase letters.
 2. Delete all of the remaining lowercase letters in ***a***.
@@ -525,40 +525,6 @@ Because we were able to successfully convert *a* to *b*, we print YES on a new l
 ```js
 // Complete the abbreviation function below.
 function abbreviation(a, b) {
-  /*let lettersA = a.toUpperCase()
-  let lettersB = b.toUpperCase()
-  let index = 0
-  let indexA = 0
-  let indexB = 0
-  let isAbbreviation = true
-  // TODO: Fix missing test cases
-  while (index < a.length || index < b.length) {
-    const letterA = a.charAt(index)
-    if (letterA && letterA === letterA.toUpperCase()) {
-        indexB = lettersB.indexOf(letterA)
-        if (indexB > -1) {
-            lettersB = lettersB.slice(indexB+1)
-        } else {
-            isAbbreviation = false
-            break
-        }
-    }
-
-    const letterB = b.charAt(index)
-    if (letterB) {
-        indexA = lettersA.indexOf(letterB)
-        if (indexA > -1) {
-            lettersA = lettersA.slice(indexA+1)
-        } else {
-            isAbbreviation = false
-            break
-        }
-    }
-
-    index++
-  }
-  return isAbbreviation ? 'YES' : 'NO'*/
-
     const firstString = a.split('')
     const secondString = b.split('')
     
