@@ -126,7 +126,7 @@ function findShortest(graphNodes, graphFrom, graphTo, ids, val) {
 
 ---
 
-### Choosing in a Graph
+### [Choosing in a Graph](https://www.hackerrank.com/challenges/matrix/problem)
 The kingdom has cities connected by bidirectional roads. There is a unique path between any pair of cities. The machines have risen up and are planning to destroy the whole kingdom. If two machines can join forces, they will attack. You have to destroy roads connecting cities with machines in order to stop them from joining forces. There must not be any path connecting two machines.
 Each of the roads takes an amount of time to destroy, and only one can be worked on at a time. Given a list of edges and times, determine the minimum time to stop the attack.
 For example, there are *n = 5* cities called 0 - 4. Three of them have machines and are colored red. The time to destroy is shown next to each road. If we cut the two green roads, there are no paths between any two machines. The time required is 3 + 2 = 5
@@ -164,8 +164,53 @@ Return an integer representing the minimum time required to disrupt the connecti
 ![Explanation](https://s3.amazonaws.com/hr-assets/0/1528209926-cda6d7fb35-matrixSample.png)
 
 The machines are located at the cities 0, 2 and 4. You can destroy the green roads resulting in a time of 5 + 5 = 10. Destroying the road between cities 2 and 1 instead of between 1 and 0 would work, but it's not minimal.
-#### SOLUTION
 
+#### SOLUTION
+```js
+function minTime(roads, machines) {
+    const n =  + 1
+    const isMachine = new Array(n).fill(false)
+    machines.forEach(m => isMachine[m] = true)
+    // Adjacency List of roads
+    const adj = new Array(n);
+    for(let i = 0; i < roads.length; i++) {
+        const road = roads[i]
+        const fromCity = road[0]
+        const toCity = road[1]
+        const time = road[2]
+        adj[fromCity] = adj[fromCity] || []
+        adj[toCity] = adj[toCity] || []
+        adj[fromCity].push([toCity, time])
+        adj[toCity].push([fromCity, time])
+    }
+
+    const visited = {}
+    let total = 0
+    const dfs = (city, time) => {
+        visited[city] = true
+        let maxTime = 0
+        let sumTime = 0
+        for(let i = 0; i < adj[city].length; i++) {
+            const neighbor = adj[city][i]
+            if(visited[neighbor[0]]) continue
+
+            const neighborTime = dfs(neighbor[0], neighbor[1])
+            sumTime += neighborTime
+            maxTime = Math.max(maxTime, neighborTime)
+        }
+
+        if(isMachine[city]) {
+            total += sumTime
+            return time;
+        } else  {
+            total += sumTime - maxTime
+            return Math.min(maxTime, time)
+        }
+    }
+    dfs(0, 0)
+    return total
+}
+```
 ---
 
 ### DFS: Connected Cell in a Grid
