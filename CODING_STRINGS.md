@@ -51,7 +51,7 @@ function countingValleys(n, s) {
 
 ---
 
-### Count the a's in an Infinitely Repeating String
+### [Count the a's in an Infinitely Repeating String](https://www.hackerrank.com/challenges/repeated-string/problem)
 There is a string, `s`, of lowercase English letters that is repeated infinitely many times.
 Given an integer, `n`, find and print the number of letter a's in the first *n* letters of this infinite string.
 For example, if the string `s = 'abcac'` and *n* = 10, the substring we consider is `'abcacabcac'`, the first 10 characters of the infinite string. There are 4 occurrences of `a` in this substring.
