@@ -1,6 +1,6 @@
-## Coding Interview Prep
+## Linked Lists
 ---
-### Reverse a Doubly Linked List
+### [Reverse a Doubly Linked List](https://www.hackerrank.com/challenges/reverse-a-doubly-linked-list/problem)
 You’re given the pointer to the head node of a doubly linked list. Reverse the order of the nodes in the list. The head node might be NULL to indicate that the list is empty. Change the *next* and *prev* pointers of all the nodes so that the direction of the list is reversed. Return a reference to the head node of the reversed list.
 #### Function Description
 Complete the *reverse* function in the editor below. It should return a reference to the head of your reversed list.
@@ -69,7 +69,7 @@ function reverse(head) {
 
 ---
 
-### Find Merge Point of Two List
+### [Find Merge Point of Two List](https://www.hackerrank.com/challenges/find-the-merge-point-of-two-joined-linked-lists/problem)
 Given pointers to the head nodes of 2 linked lists that merge together at some point, find the Node where the two lists merge. It is guaranteed that the two head Nodes will be different, and neither will be NULL.
 In the diagram below, the two lists converge at Node *x*
 ```
@@ -114,7 +114,9 @@ The diagrams below are graphical representations of the lists that input Nodes *
 ```
 #### EXPLANATION
 *Test Case 0*: As demonstrated in the diagram above, the merge Node's data field contains the integer 2.
+
 *Test Case 1*: As demonstrated in the diagram above, the merge Node's data field contains the integer 3.
+
 #### SOLUTION
 ```js
 /*
