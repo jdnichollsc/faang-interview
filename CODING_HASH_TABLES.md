@@ -1,6 +1,6 @@
-## Coding Interview Prep
+## Hash Tables
 ---
-### Encode Secret Message
+### [Encode Secret Message](https://www.hackerrank.com/challenges/ctci-ransom-note/problem)
 You have a note to send to your friend, but you don't want anyone to recognize your handwriting. You want to know if you can cut out whole words from a magazine and use them to create a secret message. The words in your note are *case-sensitive* and you *must* use only whole words available in the magazine. You *cannot* use substrings or concatenation to create the words you need.
 Given the words in the magazine and the words in the note, print Yes if you can replicate your note *exactly* using whole words from the magazine; otherwise, print No.
 For example, the note is "Coding is fun". The magazine contains only "coding is fun". The magazine has all the right words, but there's a case mismatch. The answer is No.
@@ -69,7 +69,7 @@ function checkMagazine(magazine, note) {
 ---
 
 
-### Common Substring Between Two Strings
+### [Common Substring Between Two Strings](https://www.hackerrank.com/challenges/two-strings/problem)
 Given two strings, determine if they share a common substring. A substring may be as small as one character.
 For example, the words "a", "and", "art" share the common substring *a*. The words "be" and "cat" do not share a substring.
 
