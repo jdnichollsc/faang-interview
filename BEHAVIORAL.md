@@ -47,8 +47,13 @@
 - Social networking
 - Not traveling, english is not used all the time
 ### Who was the most difficult person you have had to work with?
-- Bad environment, gossip atmosphere, particular situation (A coworker was listening a private conversation between the boss and me, he understood something else)
+- Bad environment, gossip atmosphere, particular situation:
+  - Situation: Once I was working as a Team Lead, and I was talking with my boss about the status of the project and the assigned tasks of the team. I said to my boss that he was waiting for a response from the client, and seconds later that coworker claimed me because he was gossiping and he understood something different, that I had said that he was not doing anything
+  - Task: be the leader, asking about the direction of the project and prioritize project tasks.
+  - Actions: I spoke with him, I indicated that I had understood something different, that if he wanted he could verify it with the boss.
+  - Result: I tried to change that toxic environment by being friendly with others, but in the end I left the company for a better opportunity in another company and I left them a letter thanking them for the opportunity to work with them and commenting on aspects of improvement, giving them feedback on this situation and suggestions. so that they can continue to improve, inviting them to be more transparent to avoid gossip and conflicts between coworkers.
 ### How did you bring up the code quality issues to this person?
+- Commenting merge requests to identify areas for improvement
 ### In your ideal role, what would you want to do?
 - Work with creative people, creative environment
 - Good/Safe environment (Keep growing)
