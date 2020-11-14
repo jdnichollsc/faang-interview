@@ -1,14 +1,58 @@
 ### How did you get into frontend?
+- Bring code to life
+- Social networking
+- Opportunity to work with designers, creative solutions
+- Intuitive, easy to use
+- Create new visual things like animations, games, using effects, physics, keyframes, etc
 ### What do you do right now?
+- Frontend Team Lead
+- Open Source Contributor
+- Mentor in CodeYourFuture
+- Speaker in MedellinJS
+- Help other Developers in StackOverflow, Slack, Discord, etc
 ### How many people use it (Product in your company)?
+- Platforms/Devices
+  * Android
+    Monthly 2k, Weekly 1k, Daily 586
+    - Galaxy S9 - 5.6%
+    - Galaxy S10 - 3.9%
+    - Galaxy S8 - 3.7%
+    - Galaxy S10+ - 3.6%
+  * iOS
+    Monthly 13k, Weekly 10k, Daily 5k
+    - iPhone 11 - 12.2% - 1.7k
+    - iPhone XR - 10.9% - 1.5k
+    - iPhone 11 Pro Max - 8.9% - 1.2k
+    - iPhone 5th gen - 6.9% - 939
+ - Audience/Adoption
+  * Session duration 1m26s
+  * Active users:
+    - v3.4.0 - 5412 (21.25%)
+    - v3.0.4 - 7969 (31.29%)
+    - v3.0.3 - 12082 (47.44%)
 ### How do you justify working on this kind of stuff? How do you sell your manager on this work?
 ### How do you measure that this was achieved (Product in your company)?
 ### How many people were involved? What was your role in all of this?
 ### What motivated you to leave your previous company and join your current company?
+- The opportunity to work with a distributed high-performance team (Canadá, New Zealand, Seattle).
+- Working remotely and the opportunity to travel.
+- A more challenging project because it was a multi-partner project, multi-tenant architecture.
+- Using hybrid mobile technologies.
+- Keep improving my communication skills in English.
+- USA StartUp
 ### What do you find enjoyable about working at your current company? What do you find frustrating?
+- Share with other teams, developers
+- Weekly meetings to discuss about technology, architecture, contribute to core projects
+- Give talks with the rest of the company and share it from YouTube
+- Social networking
+- Not traveling, english is not used all the time
 ### Who was the most difficult person you have had to work with?
+- Bad environment, gossip atmosphere, particular situation (A coworker was listening a private conversation between the boss and me, he understood something else)
 ### How did you bring up the code quality issues to this person?
 ### In your ideal role, what would you want to do?
+- International speaker, give talks
+- Open source contributor, working with people around the world
+- Meet people, help solving problems (Technical Recruiter)
 ### Did you have an opportunity to do this at your current job?
 ### How would a career at COMPANY_X help you grow as an engineer?
 ### Tell me about a time when somebody changed your mind
@@ -42,7 +86,7 @@
 
 ## Teamwork
 For questions like these, you want a story that illustrates your ability to work with others under challenging circuntances. Think team conflict, difficult project constraints or clashing personalities.
-### Talk aboit a time when you have to work closely with someone whose personality was very different from yours.
+### Talk about a time when you have to work closely with someone whose personality was very different from yours.
 ### Givem e an example of a time you faced a conflict while working on a team How did you handle that?
 ### Describe a time when you struggle to build a relationship with someone important. Howdid you eventually overcome that?
 ### We all make mistakes we wish we could take back. Tell me about a time you wish you'd handled a situation differently with a colleague.
@@ -77,7 +121,7 @@ In other words, get ready to talk about a time you juggled multiple responsibili
 ## Communication skills.
 You probably won't have any trouble thinking of a story communication questions, since it's not only part of most jobs; it's part of everyday life. However, the thing to remember here is to also talk about your thought process or preparation.
 ### Give me an example of a time when you were able to successfully persuade someone to see things you way at work.
-### Descrbe a time when you were the resident technical expert. What did you di ti make sure everyone was able to understand you?
+### Descrbe a time when you were the resident technical expert. What did you do to make sure everyone was able to understand you?
 ### Tell me about a time when you had to rely on written communication to get your ideas across to your team.
 ### Give me an example of a time when you have to explain something fairly complex to a frustrated client. How did you handle this delicate situation?
 ### Tell me about a successful presentation you give an why you think it was a hit.
