@@ -50,9 +50,16 @@
 - Bad environment, gossip atmosphere, particular situation (A coworker was listening a private conversation between the boss and me, he understood something else)
 ### How did you bring up the code quality issues to this person?
 ### In your ideal role, what would you want to do?
+- Work with creative people, creative environment
+- Good/Safe environment (Keep growing)
+- Work with talented professionals
 - International speaker, give talks
 - Open source contributor, working with people around the world
-- Meet people, help solving problems (Technical Recruiter)
+- Meet people, help solving problems (Technical Interviewer)
+- Be a community builder (Speaker)
+- Research about new technology
+- Facing new challenges
+- Open-minded attitude, constructive environment to have a voice and question everything (constructive criticism)
 ### Did you have an opportunity to do this at your current job?
 ### How would a career at COMPANY_X help you grow as an engineer?
 ### Tell me about a time when somebody changed your mind
