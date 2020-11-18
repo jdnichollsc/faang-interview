@@ -2,11 +2,16 @@
 - Bring code to life, create awesome user experiences
 - Social networking
 - Opportunity to work with designers, creative solutions
-- Intuitive, easy to use
+- Intuitive, easy to use, accesibility
+- Imagine and create new kind of experiences
 - Create new visual things like animations, games, using effects, physics, keyframes, etc
 ### What do you do right now?
 - Frontend Team Lead
-- Open Source Contributor
+  - Situation: Being the leader of an amazing team.
+  - Task: My goal is to support them in building solutions and solving complex challenges for leading companies.
+  - Actions: My leadership style tends to be informal, accessible, transparent.
+  - Results: I’m humbled to lead an amazing group of folks to achieve the mission of building the best software products for the world.
+- Open Source Contributor; I have a lot of passion and love for the products I'm building right now.
 - Mentor in CodeYourFuture
 - Speaker in MedellinJS
 - Help other Developers in StackOverflow, Slack, Discord, etc
@@ -120,6 +125,8 @@
     - Discuss with the team leader and defining contracts using interfaces to extract the logic to be implemented with another tool (Factory pattern and SOLID Principles, it seeks to maintain a system decoupled from the details of implementation)
   - Result: PoCs comparing performance with other tools, using an Open Source project to replace a deprecated commercial tool, contributing to fix issues with the help of the community and I was able to improve performance without a big refactor of the code that could affect the operation of the business.
 ### Can you give an example of a valuable piece of feedback that you have received?
+- 360 degree-feedback:
+  - Situation: 
 ### When did you receive constructive/negative/difficult feedback? How did you act upon this?
 ### How would your co-workers describe you? Who is your favorite co-worker?
 ### What would you do if you see a lower-performing engineer in your team?
