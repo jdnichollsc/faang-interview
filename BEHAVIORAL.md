@@ -35,6 +35,7 @@
 - Creating MVP/PoC with hybrid mobile technologies to reduce time to market and code sharing for web
 - Research about limitations and validating dependencies using third party services.
 - Creating documentation; listing technical risks, with their impact, probability, alternatives to mitigate the issues with a contingency plan and defining responsible.
+- Giving internal talks, sharing that knowledge with another teams.
 ### How do you measure that this was achieved (Product in your company)?
 - We use New Relic, AppCenter Analytics, Google Analytics, AzureApp Insights
 - Checking number of sessions, session duration, reporting taps/clicks, checking workflows, User retention, referral traffic, heatmaps.
@@ -54,10 +55,11 @@
 - Not traveling, english is not used all the time
 ### Who was the most difficult person you have had to work with?
 - Bad environment, gossip atmosphere, particular situation:
-  - Situation: Once I was working as a Team Lead, and I was talking with my boss about the status of the project and I said to my boss the assigned tasks of the team and that a co-worker was waiting for a response from the client. Few seconds later that co-worker complain me because he was gossiping and he understood something different, something like I had said that he was not doing anything.
+  - Situation: Once I was working as a Team Lead, and I was talking with my boss about the status of the project and I said to my boss the assigned tasks of the team and that a co-worker was waiting for a response from the client. Few seconds later that co-worker complain me because he was gossiping and he understood something different, something like I had said that he was not doing anything. 
   - Task: Coordinate meetings with him and also with the team, including the boss.
   - Actions: I spoke with him in private, in order to clarify that I was helping to prioritize the tasks with the boss and I said he was blocked with a task because he's waiting response from the client. Then we had a meeting with the rest of the team to be transparent, discuss any concern and help to improve our communication.
   - Result: I tried to change that environment by being friendly with others, discussing everything with the team and commenting on aspects of improvement, giving them feedback on this situation and suggestions. Also I wrote an email for the team, inviting them to ask anything, in order to generate a safe environment for all, helping to develop confidence having a better communication with the team, to avoid gossip and conflicts between co-workers.
+  - Problems: My boss wasn't very down to earth (Unrealistic requests).
 ### How did you bring up the code quality issues to this person?
 - Commenting merge requests to identify areas for improvement.
 - Giving talks about critical aspects of the project.
@@ -78,7 +80,32 @@
 - Open-minded attitude, constructive environment to have a voice and question everything (constructive criticism)
 ### Did you have an opportunity to do this at your current job?
 ### How would a career at COMPANY_X help you grow as an engineer?
+### Tell me about a situation when you failed. What did you learn from this?
+- Perfect is the enemy of good:
+  - Situation: The project's deadline was set in stone, delayed with one week sprints
+  - Tasks:
+    - Perform concept tests and technology assessments (Justify architectural decisions).
+    - Elaborate architectural baseline for Reactive applications and integrate existing solutions for a Suite of products.
+    - Help the architecture team to integrate the existing products together with the new services to meet the deliveries stipulated with the client.
+    - Coordinate and plan each of the deliveries together with the Director and the Architecture team.
+    - Evaluate new solutions for the agile development of the system.
+  - Actions:
+    - Research and compare Frameworks for reactive apps, define advantages and disadvantages, limitations and risks.
+    - Use a commercial theme to reduce time to market and create a simple dashboard for reusability in a crucial time.
+    - Upgrade the commercial theme to use the last version of MeteorJS in our products.
+  - Results:
+    - I spent a lot of time updating the theme to avoid code refactors in the future, in the end it was a success but I was tired and bored because I had invested a lot of my free time, incluiding weekends, replacing deprecated libraries and fixing the new structure of the project.
+    - I updated the baseline for the development of applications through the use of new technologies for rapid prototyping with MeteorJS and NodeJS.
+    - I developed quickly and under pressure the functionalities defined for each of the deliveries agreed with the client.
+    - I configured continuous integration for new projects through cloud services such as Azure and Visual Studio Team Services.
+    - I compared new technologies such as MeteorJS, GraphQL and Apollo Server with respect to the existing base lines in the company.
+  - Problems:
+    - Difficult to decompose a feature into small enough pieces to be consumed on a weekly basis.
+    - Individuals in the team need to be good at managing their time and not letting it get consumed by meetings, tangential discussions etc.
 ### Tell me about a time when somebody changed your mind
+- Good is better than perfect:
+  - Situation: I used to be a perfectionist in my work, because there's trade-off between being agreeable and being execution oriented, when you move fast, you can be aggresive and frustrate the people who want to get things done too.
+  - Result: I learned that you can keep iterating and make it better as well as you need instead of trying to make everything perfect the first time, to avoid frustration because nothing will ever truly be perfect.
 ### Tell me about a difficult problem you solved in the last six months
 ### Can you give an example of a valuable piece of feedback that you have received?
 ### When did you receive constructive/negative/difficult feedback? How did you act upon this?
@@ -89,7 +116,6 @@
 ### Can you describe a situation where you had to work with a decision that you didn't agree with?
 ### Describe a technical mistake you have made recently? What did you learn?
 ### What's the most difficult/challenging problem you have had to solve?
-### What is your biggest failure? What did you learn from this?
 ### If things aren’t going to plan, how do you move yourself/your projects forward?
 ### When you did you set a goal? how did you achieve it? can you describe a time you didn't achieve it?
 ### How do you seek out opportunities? (we really like candidates who are proactive in fixing/improving things)
