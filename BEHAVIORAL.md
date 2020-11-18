@@ -80,6 +80,7 @@
 - Open-minded attitude, constructive environment to have a voice and question everything (constructive criticism)
 ### Did you have an opportunity to do this at your current job?
 ### How would a career at COMPANY_X help you grow as an engineer?
+- Building a better, more connected world with the products we create
 ### Tell me about a situation when you failed. What did you learn from this?
 - Perfect is the enemy of good:
   - Situation: The project's deadline was set in stone, delayed with one week sprints
