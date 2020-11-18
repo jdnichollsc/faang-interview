@@ -1,5 +1,5 @@
 ### How did you get into frontend?
-- Bring code to life
+- Bring code to life, create awesome user experiences
 - Social networking
 - Opportunity to work with designers, creative solutions
 - Intuitive, easy to use
@@ -36,6 +36,8 @@
 - Research about limitations and validating dependencies using third party services.
 - Creating documentation; listing technical risks, with their impact, probability, alternatives to mitigate the issues with a contingency plan and defining responsible.
 ### How do you measure that this was achieved (Product in your company)?
+- We use New Relic, AppCenter Analytics, Google Analytics, AzureApp Insights
+- Checking number of sessions, session duration, reporting taps/clicks, checking workflows, User retention, referral traffic, heatmaps.
 ### How many people were involved? What was your role in all of this?
 ### What motivated you to leave your previous company and join your current company?
 - The opportunity to work with a distributed high-performance team (Canadá, New Zealand, Seattle).
