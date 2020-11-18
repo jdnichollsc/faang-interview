@@ -65,9 +65,10 @@ FAANG engineering interview process
 - [ ] [How to Crush Your Coding Interview](https://www.facebook.com/Engineering/videos/10152735777427200/?v=10152735777427200)
 - [ ] [Facebook Mock Interview Prep](https://vimeo.com/275298962) - 2018prep
 - [ ] [Software Engineering: Initial Technical Interview](https://vimeo.com/357608978) - fbprep
+- [ ] [Careers OnAir Technical Interview Coding Demo](https://youtu.be/4NS51hRSaEE)
 
 ## Tools
-- [ ] [CoderPad](https://coderpad.io/)
+- [ ] [CoderPad](https://coderpad.io)
 
 ## Mock Interviews
 - [ ] [Watch technical mock interviews with engineers from Google, Amazon, and more](https://interviewing.io/recordings)
