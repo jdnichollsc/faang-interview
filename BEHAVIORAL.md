@@ -107,6 +107,9 @@
   - Situation: I used to be a perfectionist in my work, because there's trade-off between being agreeable and being execution oriented, when you move fast, you can be aggresive and frustrate the people who want to get things done too.
   - Result: I learned that you can keep iterating and make it better as well as you need instead of trying to make everything perfect the first time, to avoid frustration because nothing will ever truly be perfect.
 ### Tell me about a difficult problem you solved in the last six months
+- Fixing non-scalable code (SmartAssist)
+- Fix database transactions
+- Improve performance in a maintenance project with classes of 30k lines of code
 ### Can you give an example of a valuable piece of feedback that you have received?
 ### When did you receive constructive/negative/difficult feedback? How did you act upon this?
 ### How would your co-workers describe you? Who is your favorite co-worker?
