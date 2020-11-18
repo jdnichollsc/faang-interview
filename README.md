@@ -37,6 +37,7 @@ FAANG engineering interview process
 - [ ] [Learn Data Structure & Algorithm in JavaScript](https://dev.to/edisonpebojots/data-structure-algorithm-chapter-01-2538)
 
 ## Design
+- [x] [Learn how to design large-scale systems](https://github.com/donnemartin/system-design-primer)
 - [ ] [Ten Design principles](https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles)
 
 ## Events
