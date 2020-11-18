@@ -31,6 +31,10 @@
     - v3.0.4 - 7969 (31.29%)
     - v3.0.3 - 12082 (47.44%)
 ### How do you justify working on this kind of stuff? How do you sell your manager on this work?
+- Research about possible vulnerabilities and advantages of using a NoSQL database for intensive workload: https://github.com/donnemartin/system-design-primer#sql-or-nosql
+- Creating MVP/PoC with hybrid mobile technologies to reduce time to market and code sharing for web
+- Research about limitations and validating dependencies using third party services.
+- Creating documentation; listing technical risks, with their impact, probability, alternatives to mitigate the issues with a contingency plan and defining responsible.
 ### How do you measure that this was achieved (Product in your company)?
 ### How many people were involved? What was your role in all of this?
 ### What motivated you to leave your previous company and join your current company?
@@ -48,17 +52,22 @@
 - Not traveling, english is not used all the time
 ### Who was the most difficult person you have had to work with?
 - Bad environment, gossip atmosphere, particular situation:
-  - Situation: Once I was working as a Team Lead, and I was talking with my boss about the status of the project and the assigned tasks of the team. I said to my boss that he was waiting for a response from the client, and seconds later that coworker claimed me because he was gossiping and he understood something different, that I had said that he was not doing anything
-  - Task: be the leader, asking about the direction of the project and prioritize project tasks.
-  - Actions: I spoke with him, I indicated that I had understood something different, that if he wanted he could verify it with the boss.
-  - Result: I tried to change that toxic environment by being friendly with others, but in the end I left the company for a better opportunity in another company and I left them a letter thanking them for the opportunity to work with them and commenting on aspects of improvement, giving them feedback on this situation and suggestions. so that they can continue to improve, inviting them to be more transparent to avoid gossip and conflicts between coworkers.
+  - Situation: Once I was working as a Team Lead, and I was talking with my boss about the status of the project and I said to my boss the assigned tasks of the team and that a co-worker was waiting for a response from the client. Few seconds later that co-worker complain me because he was gossiping and he understood something different, something like I had said that he was not doing anything.
+  - Task: Coordinate meetings with him and also with the team, including the boss.
+  - Actions: I spoke with him in private, in order to clarify that I was helping to prioritize the tasks with the boss and I said he was blocked with a task because he's waiting response from the client. Then we had a meeting with the rest of the team to be transparent, discuss any concern and help to improve our communication.
+  - Result: I tried to change that environment by being friendly with others, discussing everything with the team and commenting on aspects of improvement, giving them feedback on this situation and suggestions. Also I wrote an email for the team, inviting them to ask anything, in order to generate a safe environment for all, helping to develop confidence having a better communication with the team, to avoid gossip and conflicts between co-workers.
 ### How did you bring up the code quality issues to this person?
-- Commenting merge requests to identify areas for improvement
+- Commenting merge requests to identify areas for improvement.
+- Giving talks about critical aspects of the project.
+- Brainstorming, Listing with the team important aspects for the project.
+- Adding more reviewers to our Merge requests, in order to delegate responsabilities and share knowledge with the team.
+- Getting pair programming sessions in order to improve our code and also creating unit tests to prevent code quality issues.
+- Configuring linter for our pipelines and also for the common scripts of the projects.
 ### In your ideal role, what would you want to do?
 - Work with creative people, creative environment
 - Good/Safe environment (Keep growing)
 - Work with talented professionals
-- International speaker, give talks
+- Share in Community, Give talks, be an international speaker
 - Open source contributor, working with people around the world
 - Meet people, help solving problems (Technical Interviewer)
 - Be a community builder (Speaker)
