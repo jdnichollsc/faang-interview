@@ -126,9 +126,53 @@
   - Result: PoCs comparing performance with other tools, using an Open Source project to replace a deprecated commercial tool, contributing to fix issues with the help of the community and I was able to improve performance without a big refactor of the code that could affect the operation of the business.
 ### Can you give an example of a valuable piece of feedback that you have received?
 - 360 degree-feedback:
-  - Situation: 
+  - Situation: Evaluate communication, responsibility, teamwork and relationships, elements which are important to be aligned with the culture of the company: purpose, autonomy, mastery and distributed intelligence.
+  - Task: Analyze performance and support the implementation of improvement plans.
+  - Actions:
+    - Identify patterns based on the feedback received from my colleagues.
+    - Support my team and compare results with previous years to guide the team's work in strengthening common difficulties.
+  - Results:
+    - I identified opportunities to improve the quality of my communication; assertive communication verbal and nonverbal, 
+    - I identified good communication aspects:
+      * I keep the team updated on the work I do.
+      * I've a good communication with the client.
+      * I request help in a timely manner when I have problems advancing in my work.
+    - I identified good teamwork aspects:
+      * I suggest solutions/ideas to the team.
+      * I request clarification when I do not understand something.
+      * I offer help to the team voluntarily.
+      * I show a good disposition to collaborate with others.
+    - I identified relationship aspects:
+      * I have a good impact on my work environment.
+      * I regulate my emotional reaction to difficult or stressful situations.
+      * I have a good reaction to the suggestions or criticisms that the team says of my work.
+    - I identified responsibility aspects:
+      * I admit my mistakes.
+      * I do well the work that I have in charge.
+      * I proactively seek technical information that allows me to do my job better
+      * I proactively seek information to help me make better decisions
+      * I comply with the delivery times with which it is committed
+      * I lead initiatives within the team. (Manages information and effort of a group of people, is responsible for the results obtained from a project).
+      * I provide additional value to the work I deliver.
 ### When did you receive constructive/negative/difficult feedback? How did you act upon this?
+- Anonymous feedback:
+  - Situation: To achieve the best version of myself it is important to recognize the aspects in which I must improve, identify opportunities for our own improvement and provide ideas to our colleagues so they can perform better.
+  - Task: Give feedback anonymously because it's usually more direct, since we are withdrawn from taking it personal when we are criticized.
+  - Actions: Perform communication exercises. Define and execute actionable of the retrospective meetings.
+  - Results:
+    - I identified I need a more persuasive, clear and structured communication.
+    - Taking trainings to be concrete; Identify fillers (remove repetitions).
+    - Give some context and ask the other to know when to give more context.
+    - Request little time to clarify an idea (Give me 2 secs, let me think, draw the problem).
+    - Corroborate how much my interlocutor wants to know about the subject I am presenting.
+    - Taking training sessions to generate a plan to avoid making the same mistakes.
 ### How would your co-workers describe you? Who is your favorite co-worker?
+- Good aspects:
+  - Constantly improving: Juan, I really highlight your willingness to collaborate. You are supportive, you have an admirable interest in learning and constantly improving on a technical level. I also want to highlight the effort you make to be understood and the humility with which you share your knowledge. You bring harmony to the team and you worry that there is a good atmosphere, you are participative and you take the voice when no one else seems to want to speak. You look for challenges and you are constantly expanding your comfort zone. You receive feedback with a very good attitude and you try to implement it. You care a lot for others (not only for your team but for people in general) and you have a great motivation to add value from what you do. Your level of self-awareness regarding what you can improve has increased considerably and I have shown progress regarding the strategies you have. I have seen improvement in your way of communicating and I recognize the effort that represents you.
+- Aspects to improve:
+  - Defend a position: Sometimes I think that you take things very personally when talking about a situation in which you are involved, remember what is being talked about is to improve the team, not so that you always go out to defend a position.
+  - Effective communication: The challenge you have in your communication skills is to implement the strategies and be persistent because they require significant time for more effective communication styles to be automated. I have the impression that you privilege the use of your time to grow as a developer and that you see communication as something "additional" or "desirable but not fundamental" and by not seeing direct results so soon, your conscious effort decreases progressively. Your habits can improve a lot and I have the impression that you don't put in so much effort because you consider it secondary; But since we've discussed it so many times, this is vital for you to achieve even higher performance.
+  
 ### What would you do if you see a lower-performing engineer in your team?
 ### Tell me a time when you went out of your way to help someone
 ### Describe a time where you had a disagreement or conflict within your manager or colleague
