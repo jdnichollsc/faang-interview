@@ -93,6 +93,7 @@ FAANG engineering interview process
 - [ ] [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
 - [ ] [Functional-Light JavaScript](https://github.com/getify/Functional-Light-JS)
 - [ ] [Clean Code concepts adapted for JavaScript](https://github.com/ryanmcdermott/clean-code-javascript)
+- [ ] [70 JavaScript Interview Questions](https://dev.to/macmacky/70-javascript-interview-questions-5gfi)
 - [ ] [React Interview Questions](https://github.com/sudheerj/reactjs-interview-questions)
 
 ## Helpful Books
