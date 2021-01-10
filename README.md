@@ -78,6 +78,7 @@ FAANG engineering interview process
 
 ## Big O complexity
 - [ ] [To study runtime complexity: Big O Cheat Sheet](https://www.interviewcake.com/article/python/big-o-notation-time-and-space-complexity)
+- [ ] [Introduction to Big O Notation and Time Complexity](https://youtu.be/D6xkbGLQesk)
 
 ## JavaScript Language
 - [ ] [Learn JavaScript | MDN](https://developer.mozilla.org/en-US/Learn/JavaScript)
