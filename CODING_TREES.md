@@ -135,6 +135,7 @@ def levelOrder(root):
 
 ### [Binary Search Tree: Lowest Common Ancestor](https://www.hackerrank.com/challenges/binary-search-tree-lowest-common-ancestor/problem)
 You are given pointer to the root of the binary search tree and two values ***v*1** and ***v*2**. You need to return the lowest common ancestor ([LCA](https://en.wikipedia.org/wiki/Lowest_common_ancestor)) of ***v*1** and ***v*2** in the binary search tree.
+
 ![Description](https://s3.amazonaws.com/hr-assets/0/1529959649-81b68736f7-lcaexample.png)
 
 In the diagram above, the lowest common ancestor of the nodes 4 and 6 is the node 3.
