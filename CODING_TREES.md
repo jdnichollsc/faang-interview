@@ -26,7 +26,7 @@ Your function should return the height of the binary tree.
 ```
 3
 ```
-#### EPLANATION
+#### EXPLANATION
 The longest root-to-leaf path is shown below:
 
 ![Explanation](https://s3.amazonaws.com/hr-assets/0/1527626088-807ca5fc63-treeDepthSample1.png)
@@ -53,6 +53,82 @@ def height(root):
     else:
         return 1 + max(height(root.left), height(root.right))
 
+```
+
+---
+
+### [Level Order Traversal](https://www.hackerrank.com/challenges/tree-level-order-traversal/problem)
+Given a pointer to the root of a binary tree, you need to print the level order traversal of this tree. In level-order traversal, nodes are visited level by level from left to right. Complete the function **levelOrder** and print the values in a single line separated by a space.
+
+For example:
+
+```
+     1
+      \
+       2
+        \
+         5
+        /  \
+       3    6
+        \
+         4
+```
+For the above tree, the level order traversal is **1 -> 2 -> 5 -> 3 -> 6 -> 4**.
+
+#### INPUT FORMAT
+You are given a function,
+```
+void levelOrder(Node * root) {
+
+}
+```
+
+#### CONSTRAINTS
+1 <= Nodes in the tree <= 500
+
+#### OUTPUT FORMAT
+Print the values in a single line separated by a space.
+
+#### SAMPLE INPUT
+```
+     1
+      \
+       2
+        \
+         5
+        /  \
+       3    6
+        \
+         4  
+```
+
+#### SAMPLE OUTPUT
+`1 2 5 3 6 4`
+
+#### EXPLANATION
+We need to print the nodes level by level. We process each level from left to right.
+Level Order Traversal: **1 -> 2 -> 5 -> 3 -> 6 -> 4**.
+
+#### SOLUTION
+```python
+"""
+Node is defined as
+self.left (the left child of the node)
+self.right (the right child of the node)
+self.info (the value of the node)
+"""
+
+def levelOrder(root):
+      #Write code Here
+      q=[]
+      q.append(root)
+      while (len(q) > 0):
+            n = q.pop(0)
+            print n.info,
+            if (n.left is not None):
+                  q.append(n.left)
+            if (n.right is not None):
+                  q.append(n.right)
 ```
 
 ---
@@ -94,7 +170,7 @@ Return the a pointer to the node that is the lowest common ancestor of *v*1 and 
 #### SAMPLE OUTPUT 0
 [reference to node 4]
 
-#### EPLANATION
+#### EXPLANATION
 LCA of 1 and 7 is 4, the root in this case.
 Return a pointer to the node.
 
@@ -189,7 +265,7 @@ For each *k*, perform the swap operation and store the indices of your in-order 
 3 1 2
 2 1 3
 ```
-#### EPLANATION 0
+#### EXPLANATION 0
 As nodes 2 and 3 have no children, swapping will not have any effect on them. We only have to swap the child nodes of the root node.
 ```
     1   [s]       1    [s]       1   
@@ -212,7 +288,7 @@ As nodes 2 and 3 have no children, swapping will not have any effect on them. We
 ```
 4 2 1 5 3
 ```
-#### EPLANATION 1
+#### EXPLANATION 1
 Swapping child nodes of nodes 2 and 3 we get
 ```
     1                  1  
@@ -244,7 +320,7 @@ Swapping child nodes of nodes 2 and 3 we get
 2 9 6 4 1 3 7 5 11 8 10
 2 6 9 4 1 3 7 5 10 8 11
 ```
-#### EPLANATION 2
+#### EXPLANATION 2
 Here we perform swap operations at the nodes whose depth is either 2 or 4 for ***k = 2*** and then at nodes whose depth is 4 for ***k = 4***
 ```
          1                     1                          1             
@@ -389,7 +465,7 @@ For each query, return the minimum value of the integer *c[w]*. If no such value
 2
 -1
 ```
-#### EPLANATION 0
+#### EXPLANATION 0
 We perform the following two queries:
 1. The tree initially looks like this:
 
