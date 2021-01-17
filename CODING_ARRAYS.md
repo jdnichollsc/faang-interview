@@ -69,6 +69,7 @@ Print the minimum number of jumps needed to win the game.
 `4`
 #### Explanation 0:
 Emma must avoid `c[2]` and `c[5]`. She can win the game with a minimum of 4 jumps:
+
 ![Explanation 0](https://s3.amazonaws.com/hr-challenge-images/20832/1461134731-c258160d15-jump2.png)
 
 #### Sample Input 1
@@ -80,6 +81,7 @@ Emma must avoid `c[2]` and `c[5]`. She can win the game with a minimum of 4 jump
 `3`
 #### Explanation 1:
 The only cloud to avoid is `c[4]`. Emma can win the game in 3 jumps:
+
 ![Explanation 1](https://s3.amazonaws.com/hr-challenge-images/20832/1461136358-764298d363-jump5.png)
 
 #### SOLUTION
@@ -304,13 +306,21 @@ Too chaotic
 #### Explanation
 **Test Case 1**
 The initial state:
+
 ![the initial state](https://s3.amazonaws.com/hr-challenge-images/494/1451665589-31d436ba19-pic11.png)
+
 After person **5** moves one position ahead by asking person **4**:
+
 ![moves one position ahead](https://s3.amazonaws.com/hr-challenge-images/494/1451665679-6504422ed9-pic2.png)
+
 Now person **5** moves another position ahead by asking person **3**:
+
 ![moves another position ahead](https://s3.amazonaws.com/hr-challenge-images/494/1451665818-27bd62bb0d-pic3.png)
+
 And person **2** moves one position ahead by asking person **1**:
+
 ![moves one position ahead](https://s3.amazonaws.com/hr-challenge-images/494/1451666025-02a2395a00-pic5.png)
+
 So the final state is **2, 1, 5, 3, 4** after three swapping operations.
 
 **Test Case 2**
