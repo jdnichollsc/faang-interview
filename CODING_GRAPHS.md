@@ -268,6 +268,7 @@ We perform the following two queries:
 where our start node, **s**, is node **1**. The shortest distances from **s** to the other nodes are one edge to node **2**, one edge to node **3**, and there is no connection to node **4**.
 
 2. The given graph can be represented as:
+
 ![BFS shortest sample 2](https://s3.amazonaws.com/hr-assets/0/1528143628-62469f0450-bfs_shortestSample1.png)
 
 where our start node, **s**, is node **2**. There is only one edge here, so node **1** is unreachable from node **2** and node **3** has one edge connecting it to node **2**. We then print node **2**'s distance to nodes **1** and **3** (respectively) as a single line of space-separated integers: -1 6.
@@ -352,6 +353,7 @@ function processData(input) {
 The kingdom has cities connected by bidirectional roads. There is a unique path between any pair of cities. The machines have risen up and are planning to destroy the whole kingdom. If two machines can join forces, they will attack. You have to destroy roads connecting cities with machines in order to stop them from joining forces. There must not be any path connecting two machines.
 Each of the roads takes an amount of time to destroy, and only one can be worked on at a time. Given a list of edges and times, determine the minimum time to stop the attack.
 For example, there are *n = 5* cities called 0 - 4. Three of them have machines and are colored red. The time to destroy is shown next to each road. If we cut the two green roads, there are no paths between any two machines. The time required is 3 + 2 = 5
+
 ![Explanation](https://s3.amazonaws.com/hr-assets/0/1528209077-f7699103c6-matrixExample.png)
 
 #### Function Description
