@@ -313,50 +313,122 @@
 
 ## Teamwork
 For questions like these, you want a story that illustrates your ability to work with others under challenging circuntances. Think team conflict, difficult project constraints or clashing personalities.
-### Talk about a time when you have to work closely with someone whose personality was very different from yours.
-### Givem e an example of a time you faced a conflict while working on a team How did you handle that?
-### Describe a time when you struggle to build a relationship with someone important. Howdid you eventually overcome that?
-### We all make mistakes we wish we could take back. Tell me about a time you wish you'd handled a situation differently with a colleague.
-### Tell me about a time you needed to get information from someome who wasn't very responsive. What did you do?
+
+<details>
+  <summary><b>Talk about a time when you have to work closely with someone whose personality was very different from yours.</b></summary>
+</details>
+<details>
+  <summary><b>Givem e an example of a time you faced a conflict while working on a team How did you handle that?</b></summary>
+</details>
+<details>
+  <summary><b>Describe a time when you struggle to build a relationship with someone important. Howdid you eventually overcome that?</b></summary>
+</details>
+<details>
+  <summary><b>We all make mistakes we wish we could take back. Tell me about a time you wish you'd handled a situation differently with a colleague.</b></summary>
+</details>
+<details>
+  <summary><b>Tell me about a time you needed to get information from someome who wasn't very responsive. What did you do?</b></summary>
+</details>
 
 ## Client-facing Skills.
 If the role you are interviewing for work with clients, definetely be ready for one of these. Find an example of a time where you successfully represented your company or team and delivered exceptional customer service.
-### Describe a time when it was especially important to make a good impression on a client. How did you go about doing so?
-### Give me an example of a time when you did not meet a client's expectation. What happened, and how did you attempt to rectify the situation?
-### Tell me about atime when you made sure a customer was pleased with your service.
-### Describe a time when you had to interact with a difficult client. What was rhe situation and how did you handle it?
-### When you're working with a large number of customers it's tricky to deliver excellent service to them all. How do you go about prioritizing your customers's needs
+
+<details>
+  <summary><b>Describe a time when it was especially important to make a good impression on a client. How did you go about doing so?</b></summary>
+</details>
+<details>
+  <summary>
+    <b>Give me an example of a time when you did not meet a client's expectation. What happened, and how did you attempt to rectify the situation?</b>
+  </summary>
+</details>
+<details>
+  <summary><b>Tell me about atime when you made sure a customer was pleased with your service.</b></summary>
+</details>
+<details>
+  <summary><b>Describe a time when you had to interact with a difficult client. What was the situation and how did you handle it?</b></summary>
+</details>
+<details>
+  <summary>
+    <b>When you're working with a large number of customers it's tricky to deliver excellent service to them all. How do you go about prioritizing your customers's needs</b>
+  </summary>
+</details>
 
 ## Ability to adapt
 Times of turmoil are finally goo for somoething! Think of a recent work crisis you successfully navigated. Even if you navigation didn't feel successfull at the time, find a lesson or silver lining  you took from the situation.
 
-### Tell me about atime you were under a lot of pressure. What was going on, and how did you get through it?
-### Describe a time when your team or company was undergoing some change. How did that impact you and how did you adapt?
-### Tell me about the first job you've ever had. What did you do to learn the ropes?
-### Give me an example of a time when you had to think on your feet in order to delicately extricate yourself from a difficult or awkward situation?
-### Tell me about a time you failed. How did you deal with the situation?
+<details>
+  <summary><b>Tell me about atime you were under a lot of pressure. What was going on, and how did you get through it?</b></summary>
+</details>
+<details>
+  <summary><b>Describe a time when your team or company was undergoing some change. How did that impact you and how did you adapt?</b></summary>
+</details>
+<details>
+  <summary><b>Tell me about the first job you've ever had. What did you do to learn the ropes?</b></summary>
+</details>
+<details>
+  <summary>
+    <b>Give me an example of a time when you had to think on your feet in order to delicately extricate yourself from a difficult or awkward situation?</b>
+  </summary>
+</details>
+<details>
+  <summary><b>Tell me about a time you failed. How did you deal with the situation?</b></summary>
+</details>
 
 ## Time management skills.
 In other words, get ready to talk about a time you juggled multiple responsibilities, organized it all (perfectly), and completed everything before the deadline.
 
-### Tell me about a time you had to be very strategic in order to meet all your top priorities.
-### Describe a lonn-term project that you managed. How did you keep everything moving alone in a timely manner.
-### Sometimes it's just not possible to get everything on your to-do list done. Tell me about a time your responsibilities got a little overwhelming. What did you do?
-### Tell me about atime you set s gosl for yourself. How did you go about ensuring  that you would meet your objective.
-### Give me an example of a time you managed numerous responsibilities. How did you handle that?
+<details>
+  <summary><b>Tell me about a time you had to be very strategic in order to meet all your top priorities.</b></summary>
+</details>
+<details>
+  <summary><b>Describe a lonn-term project that you managed. How did you keep everything moving alone in a timely manner.</b></summary>
+</details>
+<details>
+  <summary><b>Sometimes it's just not possible to get everything on your to-do list done. Tell me about a time your responsibilities got a little overwhelming. What did you do?</b></summary>
+</details>
+<details>
+  <summary><b>Tell me about atime you set s gosl for yourself. How did you go about ensuring  that you would meet your objective.</b></summary>
+</details>
+<details>
+  <summary><b>Give me an example of a time you managed numerous responsibilities. How did you handle that?</b></summary>
+</details>
 
 ## Communication skills.
 You probably won't have any trouble thinking of a story communication questions, since it's not only part of most jobs; it's part of everyday life. However, the thing to remember here is to also talk about your thought process or preparation.
-### Give me an example of a time when you were able to successfully persuade someone to see things you way at work.
-### Descrbe a time when you were the resident technical expert. What did you do to make sure everyone was able to understand you?
-### Tell me about a time when you had to rely on written communication to get your ideas across to your team.
-### Give me an example of a time when you have to explain something fairly complex to a frustrated client. How did you handle this delicate situation?
-### Tell me about a successful presentation you give an why you think it was a hit.
+
+<details>
+  <summary><b>Give me an example of a time when you were able to successfully persuade someone to see things you way at work.</b></summary>
+</details>
+<details>
+  <summary><b>Descrbe a time when you were the resident technical expert. What did you do to make sure everyone was able to understand you?</b></summary>
+</details>
+<details>
+  <summary><b>Tell me about a time when you had to rely on written communication to get your ideas across to your team.</b></summary>
+</details>
+<details>
+  <summary>
+    <b>Give me an example of a time when you have to explain something fairly complex to a frustrated client. How did you handle this delicate situation?</b>
+  </summary>
+</details>
+<details>
+  <summary><b>Tell me about a successful presentation you give an why you think it was a hit.</b></summary>
+</details>
 
 ## Motivation and values
 A lot of seemingly random interview questions are actually attemps to learn more about what motivates you. Your response would ideally address this directly even if the question wasn't explicit about it.
-### Tell me about your proudest professional accomplishments
-### Describe atime when you saw some problem and took the initiative to correct it rather than waiting for someone else to do it.
-### Tell me about a time when you worked under closoe supervision or extremely loose supervision. How did you handle that?
-### Give me an example of a time you were able to be creative with your work. What was exciting or difficult about it?
-### Tell me about a time you were dissatisfied in your work. What could have been done to make it better)
+
+<details>
+  <summary><b>Tell me about your proudest professional accomplishments</b></summary>
+</details>
+<details>
+  <summary><b>Describe atime when you saw some problem and took the initiative to correct it rather than waiting for someone else to do it.</b></summary>
+</details>
+<details>
+  <summary><b>Tell me about a time when you worked under closoe supervision or extremely loose supervision. How did you handle that?</b></summary>
+</details>
+<details>
+  <summary><b>Give me an example of a time you were able to be creative with your work. What was exciting or difficult about it?</b></summary>
+</details>
+<details>
+  <summary><b>Tell me about a time you were dissatisfied in your work. What could have been done to make it better)</b></summary>
+</details>
