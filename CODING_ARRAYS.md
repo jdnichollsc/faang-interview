@@ -1,6 +1,42 @@
 ## Arrays
 ---
 
+### Flatten Array
+Given a multidimensional array with depth of n, flatten it. Once flattened make it available as a method on array instance
+
+#### Sample Input
+```
+[
+  [1, 2, 3],
+  3,
+  '',
+  true,
+  [[1,[2,3,[4]]]]
+]
+```
+#### Sample Output
+```
+[1, 2, 3, '', true]
+```
+
+#### SOLUTION
+```js
+const flatMap = (array) => {
+  return array.reduce(function (acc, element) {
+    if (element instanceof Array) {
+      acc = acc.concat(flatMap(element));
+    } else {
+      acc.push(element);
+    }
+    return acc;
+  }, []);
+};
+
+const data = [[1, 2, 3], 3, "", true, [[1, [2, 3, [4]]]]];
+const expected = [1, 2, 3, 3, "", true, 1, 2, 3, 4];
+console.assert(flatMap(data).length === expected.length, "Oh no!");
+```
+
 ### [Count Matching Pairs of Numbers](https://www.hackerrank.com/challenges/sock-merchant/problem)
 Given an array of integers, determine how many pairs of matching integers there are.
 For example, in an array of length 7, sampleArray = [1, 2, 1, 2, 1, 3, 2],  there is one pair of 1's and one pair of 2's. There are three unpaired numbers left, a 1, a 2 and a 3. The number of pairs is 2.
