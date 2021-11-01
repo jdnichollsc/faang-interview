@@ -718,3 +718,83 @@ function arrayManipulation(n, queries) {
 ```
 
 ---
+
+### Spiral Pattern
+Given a two dimensional array (matrix) with dimensions mxn, fill it in a spiral pattern, starting with 1 and continuing until filled.
+
+#### SAMPLE INPUT 1
+```
+4
+```
+
+#### SAMPLE OUTPUT 1
+```
+ 1  2  3 4
+12 13 14 5
+11 16 15 6
+10  9  8 7
+```
+
+#### SAMPLE INPUT 2
+```
+5
+```
+
+#### SAMPLE OUTPUT 2
+```
+ 1  2  3  4 5
+16 17 18 19 6
+15 24 25 20 7
+14 23 22 21 8
+13 12 11 10 9
+```
+
+#### SOLUTION
+```js
+function generateMatrix(n) {
+  // create an empty two dimensional array
+  const result = new Array(n).fill().map(() => new Array(n).fill(0));
+  let count = 1;
+  let startCol = 0;
+  let endCol = n - 1;
+  let startRow = 0;
+  let endRow = n - 1;
+  // iterate until we found the last inner spiral
+  while (startCol <= endCol && startRow <= endRow) {
+    // fill to right
+    for (let i = startCol; i <= endCol; i++) {
+      result[startRow][i] = count;
+      count++;
+    }
+    // increment start row for next time
+    startRow++;
+
+    // fill to down
+    for (let j = startRow; j <= endRow; j++) {
+      result[j][endCol] = count;
+      count++;
+    }
+    // decrement end col for next time
+    endCol--;
+
+    // fill to left
+    for (let i = endCol; i >= startCol; i--) {
+      result[endRow][i] = count;
+      count++;
+    }
+    // decrement end row for next time
+    endRow--;
+
+    // fill to top
+    for (let i = endRow; i >= startRow; i--) {
+      result[i][startCol] = count;
+      count++;
+    }
+    // increment start col for next time
+    startCol++;
+  }
+  return result;
+}
+```
+
+---
