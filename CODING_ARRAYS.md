@@ -798,3 +798,64 @@ function generateMatrix(n) {
 ```
 
 ---
+
+### Remove comments from code
+
+Given an array of lines of code, remove single and block comments and return the not empty lines.
+
+#### SOLUTION
+```js
+function removeCommentsFromCodeLines(linesOfCode) {
+  const result = [];
+  let foundBlockComment = false;
+  for (let i = 0; i < linesOfCode.length; i++) {
+    let string = linesOfCode[i];
+    string = string.replace(/\/\/.*/, "").replace(/\/\*.*\//, "");
+    if (foundBlockComment) {
+      const indexEndBlockComment = string.indexOf("*/");
+      if (indexEndBlockComment > -1) {
+        const substring = string.substring(0, indexEndBlockComment + 2);
+        string = string.replace(substring, "");
+        foundBlockComment = false;
+      } else {
+        string = "";
+      }
+    }
+    const indexStartBlockComment = string.indexOf("/*");
+    if (!foundBlockComment && indexStartBlockComment > -1) {
+      // replace substring from beggining of block comment until end line
+      const substring = string.substring(indexStartBlockComment);
+      string = string.replace(substring, "");
+      foundBlockComment = true;
+    }
+    const newLine = string.trim();
+    if (newLine.length) {
+      result.push(newLine);
+    }
+  }
+  return result;
+}
+```
+
+#### TEST
+```js
+test("should remove comments correctly", () => {
+  const lines = `
+  // Single line comment
+  /* Block comment */
+  /*
+  * Multiple lines /*
+  */ function lol() {} /* 
+  fdfddf dffdfddf df df
+  */
+  // Function to add two numbers
+  function sum(a, b) {
+      return a + b; // Return the sum
+  }
+  `.split(/\r\n|\r|\n/);
+  const result = removeCommentsFromCodeLines(lines);
+  expect(result.length).toBe(
+    ["function lol() {} ", "function sum(a, b) {", "return a + b;", "}"].length
+  );
+});
+```
