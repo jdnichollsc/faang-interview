@@ -36,6 +36,7 @@ const data = [[1, 2, 3], 3, "", true, [[1, [2, 3, [4]]]]];
 const expected = [1, 2, 3, 3, "", true, 1, 2, 3, 4];
 console.assert(flattenArray(data).length === expected.length, "Oh no!");
 ```
+---
 
 ### [Count Matching Pairs of Numbers](https://www.hackerrank.com/challenges/sock-merchant/problem)
 Given an array of integers, determine how many pairs of matching integers there are.
