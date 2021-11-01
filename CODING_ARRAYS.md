@@ -21,7 +21,7 @@ Given a multidimensional array with depth of n, flatten it. Once flattened make 
 
 #### SOLUTION
 ```js
-const flatMap = (array) => {
+const flattenArray = (array) => {
   return array.reduce(function (acc, element) {
     if (element instanceof Array) {
       acc = acc.concat(flatMap(element));
@@ -34,7 +34,7 @@ const flatMap = (array) => {
 
 const data = [[1, 2, 3], 3, "", true, [[1, [2, 3, [4]]]]];
 const expected = [1, 2, 3, 3, "", true, 1, 2, 3, 4];
-console.assert(flatMap(data).length === expected.length, "Oh no!");
+console.assert(flattenArray(data).length === expected.length, "Oh no!");
 ```
 
 ### [Count Matching Pairs of Numbers](https://www.hackerrank.com/challenges/sock-merchant/problem)
