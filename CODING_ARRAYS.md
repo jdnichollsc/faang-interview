@@ -16,7 +16,7 @@ Given a multidimensional array with depth of n, flatten it. Once flattened make 
 ```
 #### Sample Output
 ```
-[1, 2, 3, '', true]
+[1, 2, 3, 3, "", true, 1, 2, 3, 4]
 ```
 
 #### SOLUTION
